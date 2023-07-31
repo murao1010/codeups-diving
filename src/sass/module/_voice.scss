@@ -1,0 +1,71 @@
+@use 'global' as *;
+
+.voice {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  @include mq('md') {
+    padding-top: rem(140);
+    padding-bottom: rem(140);
+    position: relative;
+  }
+}
+
+.voice::before {
+  @include mq('md') {
+    content: "";
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/illust_voice_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: rem(20);
+    left: 6.94444%;
+  }
+
+}
+
+.voice::after {
+  @include mq('md') {
+    content: "";
+    width: rem(71);
+    height: rem(162);
+    background-image: url(../images/common/illust_voice_2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    right: 12.5%;
+    bottom: rem(73);
+  }
+}
+
+.voice__title-wrap {
+  text-align: center;
+}
+
+.voice__items {
+  display: block;
+  margin-top: rem(40);
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.voice__item:nth-child(n + 2) {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+.voice__button-wrap {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+

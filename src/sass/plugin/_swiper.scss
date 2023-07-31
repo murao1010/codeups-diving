@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+.swiper {
+  padding-right: rem(58);
+  padding-bottom: rem(10);
+  padding-top: rem(10);
+  
+}
+
+.swiper .swiper-slide {
+  max-width: rem(280);
+  @include mq('md') {
+    max-width: rem(333);
+  }
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  @include mq('md') {
+    display: block;
+    height: rem(80);
+    width: rem(80);
+    position: relative;
+  }
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(80);
+  margin: auto;
+  width: rem(80);
+  position: relative;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../images/common/swiper-prev.png);
+  // position: absolute;
+  // left: rem(400);
+  // top: rem(-300);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../images/common/swiper-next.png);
+  // position: absolute;
+  // right: rem(400);
+  // top: rem(-300);
+}

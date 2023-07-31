@@ -1,0 +1,74 @@
+@use 'global' as *;
+
+.button {
+  display: inline-block;
+  width: 100%;
+  max-width: rem(202);
+  border-radius: 0;
+  color: $white;
+  border: 1px solid $accent;
+  background: $accent;
+  padding: rem(16) rem(40);
+  font-size: rem(14);
+  font-weight: $normal;
+  font-family: $second-font-family;
+  line-height: calc(22 / 14);
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  text-align-last: left;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: rem(4);
+  bottom: rem(-4);
+  right: rem(-4);
+  left: rem(4);
+  border: 1px solid $accent;
+  z-index: -1;
+}
+
+.button::after {
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: $accent;
+}
+
+.button:hover::after {
+  transform: scale(1, 1);
+}
+
+.button span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: rem(40);
+  transform: translateY(-50%);
+  width: rem(40);
+  height: rem(6);
+  background: url(../images/common/arrow_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.button:hover span{
+  background: url(../images/common/arrow_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+.campaign {
+  padding-top: rem(120);
+  overflow: hidden;
+}
+
+.campaign__inner {
+  padding-right: 0;
+}
+
+.campaign__title-wrap {
+  text-align: center;
+}
+
+.campaign__content {
+  margin-top: rem(24);
+  @include mq('md') {
+    max-width: rem(1440);
+    margin-top: rem(40);
+    position: relative;
+    // right: calc(50% - 50vw);
+    width: 100vw;
+  }
+}
+
+.campaign__items {
+
+}
+
+.campaign__button-wrap {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
