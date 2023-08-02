@@ -4,7 +4,7 @@
   padding-right: rem(58);
   padding-bottom: rem(10);
   padding-top: rem(10);
-  
+  position: relative;
 }
 
 .swiper .swiper-slide {
@@ -22,9 +22,25 @@
     display: block;
     height: rem(80);
     width: rem(80);
-    position: relative;
   }
 }
+
+.swiper-button-prev {
+  @include mq('md') {
+    position: absolute;
+    left: 58%;
+    top: rem(-64);
+  }
+}
+
+.swiper-button-next {
+  @include mq('md') {
+    position: absolute;
+    right: 27%;
+    top: rem(-64);
+  }
+}
+
 
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev::after,
@@ -35,19 +51,13 @@
   height: rem(80);
   margin: auto;
   width: rem(80);
-  position: relative;
+  display: block;
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev::after {
   background-image: url(../images/common/swiper-prev.png);
-  // position: absolute;
-  // left: rem(400);
-  // top: rem(-300);
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
   background-image: url(../images/common/swiper-next.png);
-  // position: absolute;
-  // right: rem(400);
-  // top: rem(-300);
 }

@@ -1,0 +1,122 @@
+@use 'global' as *;
+
+.footer {
+  background-color: $accent;
+  color: $white;
+  padding-top: rem(48);
+  padding-right: 0;
+  padding-bottom: rem(56);
+  padding-left: 0;
+}
+
+.footer__heading {
+  @include mq('md') {
+    display: flex;
+    align-items: end;
+  }
+}
+
+.footer__logo img {
+  width: rem(120);
+  @include mq('md') {
+    width: rem(200);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  margin-top: rem(16);
+  @include mq('md') {
+    margin-left: rem(40);
+  }
+}
+
+.footer__sns img {
+  width: rem(24);
+  @include mq('md') {
+    width: rem(32);
+  }
+}
+
+.footer__sns-instagram {
+  margin-left: rem(16);
+}
+
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.footer__body-left {
+  width: 50%;
+  @include mq('md') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__body-right {
+  width: 50%;
+  @include mq('md') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__column {
+  @include mq('md') {
+    width: 50%;
+  }
+}
+
+.footer__nav-wrap {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.footer__nav-item {
+  padding-left: rem(22);
+  margin-top: rem(40);
+  position: relative;
+}
+
+.footer__nav-item::before {
+  content: "";
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/starfish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: rem(5);
+}
+
+.footer__nav-item a {
+  font-weight: $bold;
+  position: relative;
+}
+
+.footer__sub-nav-item {
+  margin-top: rem(24);
+}
+
+.footer__sub-nav-item a {
+  font-weight: $normal;
+}
+
+.footer__copyright {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.footer__copyright small {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  line-height: calc(18 / 12);
+}

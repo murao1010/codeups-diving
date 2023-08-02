@@ -26,7 +26,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
   //Swiper
-  let swiper = new Swiper(".js-campaign-swiper", {
+  let swiper = new Swiper('.js-mv-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+  });
+
+
+  let swiper2 = new Swiper(".js-campaign-swiper", {
     // loop: true,
     grabCursor: true,
     slidesPerView: 'auto',
@@ -47,4 +56,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       prevEl: ".swiper-button-prev",
     },
   });
+
+  //ドロワーメニュー
+  $(".js-hamburger").click(function () {
+    if ($(".js-hamburger").hasClass("is-active")) {
+    $(".js-hamburger").removeClass("is-active");
+    $(".js-sp-nav").fadeOut(300);
+  } else {
+    $(".js-hamburger").addClass("is-active");
+    $(".js-sp-nav").fadeIn(300);
+  }
+  });
+
 });

@@ -1,0 +1,69 @@
+@use 'global' as *;
+
+.pc-nav {
+
+}
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.pc-nav__item,
+.pc-nav__item a  {
+  height: inherit;
+}
+
+.pc-nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.pc-nav__item a {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $white;
+  font-size: rem(10);
+  line-height: calc(15 /10);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  position: relative;
+}
+
+.pc-nav__item a::before {
+  content: attr(data-en);
+  text-transform: capitalize;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  font-weight: $normal;
+  color: $white;
+  display: block;
+  line-height: calc(18 / 18);
+  text-align: center;
+}
+
+.pc-nav__item a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(23);
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background: $accent;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+// .pc-nav__item .currenta::after,
+.pc-nav__item a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
