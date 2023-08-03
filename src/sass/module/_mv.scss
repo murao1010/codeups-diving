@@ -7,10 +7,6 @@
   overflow: hidden
 }
 
-.mv__container {
-
-}
-
 .mv__image-pc {
   display: none;
   @include mq('md') {
@@ -33,22 +29,29 @@
 
 .mv__header {
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
   text-align: center;
+  @include mq('md') {
+    top: 55.6%;
+    left: 50%;
+  }
 }
 
 .mv__title {
   color: $white;
   font-family: $third-font-family;
   font-size: rem(40);
-  letter-spacing: 0.74em;
+  letter-spacing: 0.54em;
   line-height: calc(48 / 40);
+  padding-left: rem(24);
   @include mq('md') {
     font-size: rem(80);
     line-height: calc(100 / 80);
+    letter-spacing: 0.525em;
+    padding-left: rem(40);
   }
 }
 

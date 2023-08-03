@@ -32,7 +32,7 @@
 
 
 .blog-card__body {
-  margin-top: rem(24);
+  margin-top: rem(16);
 }
 
 .blog-card__date {
@@ -52,6 +52,10 @@
   margin-top: rem(4);
   padding-top: rem(16);
   border-top: 1px solid $accent;
+  padding-left: rem(2);
+  @include mq('md') {
+    padding-left: 0;
+  }
 }
 
 .blog-card__text {

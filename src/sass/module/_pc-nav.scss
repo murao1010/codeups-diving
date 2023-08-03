@@ -1,9 +1,5 @@
 @use 'global' as *;
 
-.pc-nav {
-
-}
-
 .pc-nav__items {
   display: flex;
   align-items: center;
@@ -35,6 +31,11 @@
   position: relative;
 }
 
+.pc-nav__item:last-child a {
+  padding-right: 0;
+}
+
+
 .pc-nav__item a::before {
   content: attr(data-en);
   text-transform: capitalize;
@@ -45,6 +46,7 @@
   display: block;
   line-height: calc(18 / 18);
   text-align: center;
+  margin-bottom: rem(3);
 }
 
 .pc-nav__item a::after {

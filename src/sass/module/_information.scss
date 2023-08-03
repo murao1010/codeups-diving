@@ -17,7 +17,7 @@
 
 .information__contents {
   display: block;
-  margin-top: rem(24);
+  margin-top: rem(23);
   @include mq('md') {
     margin-top: rem(40);
     display: flex;
@@ -73,9 +73,13 @@
 }
 
 .information__text-block {
-  margin-top: rem(8);
+  margin-top: rem(3);
   padding-top: rem(8);
   border-top: 1px solid $accent;
+  @include mq('md') {
+    margin-top: rem(8);
+    padding-top: rem(8);
+  }
 }
 
 .information__text {

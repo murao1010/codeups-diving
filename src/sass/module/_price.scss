@@ -27,16 +27,12 @@
 
 }
 
-.price__inner {
-
-}
-
 .price__title-wrap {
   text-align: center;
 }
 
 .price__contents {
-  margin-top: rem(24);
+  margin-top: rem(27);
   @include mq('md') {
     margin-top: rem(40);
     display: flex;
@@ -82,6 +78,9 @@
 
 .price__item:nth-child(n + 2) {
   margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(50);
+  }
 }
 
 .price__category {
@@ -100,7 +99,10 @@
   align-items: center;
   justify-content: space-between;
   color: $black;
-  margin-top: rem(5);
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(5);
+  }
 }
 
 .price__menu-name {
@@ -126,7 +128,7 @@
 }
 
 .price__button-wrap {
-  margin-top: rem(40);
+  margin-top: rem(36);
   text-align: center;
   @include mq('md') {
     margin-top: rem(80);

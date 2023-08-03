@@ -2,16 +2,21 @@
 
 .blog {
   padding-top: rem(80);
-  padding-bottom: rem(80);
+  // padding-bottom: rem(80);
   @include mq('md') {
     padding-top: rem(100);
-    padding-bottom: rem(100);
+    // padding-bottom: rem(100);
     background-image: url(../images/common/Blog-BG.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top center;
     position: relative;
   }
+}
+
+.inner.blog__inner {
+  padding: 0 rem(20);
+  
 }
 
 .blog::before {

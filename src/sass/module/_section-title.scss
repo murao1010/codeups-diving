@@ -13,7 +13,7 @@
 
 .section-title::before {
   content: attr(data-en);
-  text-transform: capitalize;
+  // text-transform: capitalize;
   font-family: $second-font-family;
   font-size: rem(32);
   font-weight: $normal;
