@@ -37,20 +37,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
   let swiper2 = new Swiper(".js-campaign-swiper", {
-    // loop: true,
     grabCursor: true,
     slidesPerView: 'auto',
     spaceBetween: 24,
     breakpoints: {
-      // スライドの表示枚数：500px以上の場合
+      // スライドの表示枚数：768px以上の場合
       768: {
         slidesPerView: 3.5,
+        spaceBetween: 30,
+      },
+      // スライドの表示枚数：1024px以上の場合
+      1024: {
+        slidesPerView: 3.5,
         spaceBetween: 40,
-      }
+      },
     },
-    // autoplay: {
-    //   delay: 3000,
-    // },
     // 前後の矢印
     navigation: {
       nextEl: ".swiper-button-next",
