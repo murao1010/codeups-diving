@@ -22,28 +22,32 @@
   display: flex;
 }
 
-/* 左側の列のスタイル */
 .sp-nav__left-column {
-  width: 50%; /* 2列にするため、幅は50%に設定 */
-  display: inline-block; /* 横に並べるため */
-  vertical-align: top; /* 上揃えに設定 */
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
-/* 右側の列のスタイル */
+
 .sp-nav__right-column {
-  width: 50%; /* 2列にするため、幅は50%に設定 */
-  display: inline-block; /* 横に並べるため */
-  vertical-align: top; /* 上揃えに設定 */
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
-
-.sp-nav__nav {
-
-}
-
 
 .sp-nav__nav-item {
-  margin-top: rem(40);
+  margin-top: rem(36);
   padding-left: rem(22);
   position: relative;
+}
+
+.sp-nav__nav-item:not(:first-child) {
+  margin-top: rem(35);
+}
+
+
+
+.sp-nav__nav-item.sp-nav__nav-item--mt {
+  margin-top: rem(31);
 }
 
 .sp-nav__nav-item::before {
@@ -67,12 +71,8 @@
   line-height: calc(18 / 16);
 }
 
-.sp-nav__sub-nav {
-
-}
-
 .sp-nav__sub-nav-item {
-  margin-top: rem(24);
+  margin-top: rem(18);
 }
 
 .sp-nav__sub-nav-item  a {

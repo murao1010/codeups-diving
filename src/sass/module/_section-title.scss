@@ -13,7 +13,6 @@
 
 .section-title::before {
   content: attr(data-en);
-  // text-transform: capitalize;
   font-family: $second-font-family;
   font-size: rem(32);
   font-weight: $normal;
@@ -33,13 +32,19 @@
 }
 
 .section-title--white {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }
 
 .section-title--white::before {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }
 
 .section-title--white::first-letter {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }

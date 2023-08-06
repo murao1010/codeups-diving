@@ -32,7 +32,7 @@
 
 .hamburger.is-active span:nth-child(1) {
   top: 50%;
-  transform: rotate(45deg);
+  transform: rotate(37deg);
 }
 
 .hamburger.is-active span:nth-child(2) {
@@ -42,5 +42,5 @@
 
 .hamburger.is-active span:nth-child(3) {
   top: 50%;
-  transform: rotate(-45deg);
+  transform: rotate(-37deg);
 }

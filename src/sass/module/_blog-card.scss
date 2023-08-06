@@ -54,7 +54,8 @@
   border-top: 1px solid $accent;
   padding-left: rem(2);
   @include mq('md') {
-    padding-left: 0;
+    padding-left: rem(2);
+    padding-right: rem(2);
   }
 }
 

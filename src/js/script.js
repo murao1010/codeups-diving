@@ -1,4 +1,5 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+
   // 要素の取得とスピードの設定
   var box = $('.js-image-effect');
   var speed = 700;
@@ -29,9 +30,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   let swiper = new Swiper('.js-mv-swiper', {
     loop: true,
     slidesPerView: 1,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
   });
 
 
@@ -60,12 +61,65 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //ドロワーメニュー
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
-    $(".js-hamburger").removeClass("is-active");
-    $(".js-sp-nav").fadeOut(300);
-  } else {
-    $(".js-hamburger").addClass("is-active");
-    $(".js-sp-nav").fadeIn(300);
-  }
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-sp-nav").fadeOut(300);
+    } else {
+      $(".js-hamburger").addClass("is-active");
+      $(".js-sp-nav").fadeIn(300);
+    }
   });
 
+  //トップに戻るボタン
+  $(".top-button").hide();
+  $(window).on("scroll resize", function () { // ウィンドウサイズの変更も監視するように追加
+    if ($(this).scrollTop() > 100) {
+      $(".top-button").fadeIn("fast");
+    } else {
+      $(".top-button").fadeOut("fast");
+    }
+
+    let scrollHeight = $(document).height();
+    let scrollPosition = $(window).height() + $(window).scrollTop();
+    let footHeight = $(".footer").innerHeight();
+    let bottomOffset;
+
+    if ($(window).width() <= 767) { // ウィンドウ幅が767以下の場合
+      bottomOffset = footHeight + 16;
+    } else { // ウィンドウ幅が768以上の場合
+      bottomOffset = footHeight + 20;
+    }
+
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $(".top-button").css({
+        "position": "absolute",
+        "bottom": bottomOffset + "px" // 変数を使用して位置を設定
+      });
+    } else {
+      $(".top-button").css({
+        "position": "fixed",
+        "bottom": "20px"
+      });
+    }
+  });
+
+  $('.top-button').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 400);
+    return false;
+  });
+
+  // ヘッダークラス名付与 MV以下で色付け
+  let header = $('.header')
+  let headerHeight = $('.header').height();
+  let height = $('.js-mv-height').height();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > (height - headerHeight)) {
+      // 指定px以上のスクロールでボタンを表示
+      header.addClass('is-color');
+    } else {
+      // 画面が指定pxより上ならボタンを非表示
+      header.removeClass('is-color');
+    }
+  });
 });

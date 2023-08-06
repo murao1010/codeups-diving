@@ -24,7 +24,7 @@
   width: 50%;
   padding-bottom: rem(4);
   @include mq('md') {
-    padding-top: rem(24);/* いらないかも */
+    padding-top: rem(24);
     width: calc(276 / 474 * 100%);
     padding-bottom: 0;
   }
@@ -102,6 +102,5 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: calc(24 / 16);
-  color: #000;
 }
 

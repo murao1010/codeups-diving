@@ -24,7 +24,6 @@
     bottom: rem(60);
     left: 6.94444%;
   }
-
 }
 
 .price__title-wrap {
@@ -79,7 +78,7 @@
 .price__item:nth-child(n + 2) {
   margin-top: rem(40);
   @include mq('md') {
-    margin-top: rem(50);
+    margin-top: rem(47);
   }
 }
 
@@ -101,7 +100,7 @@
   color: $black;
   margin-top: rem(8);
   @include mq('md') {
-    margin-top: rem(5);
+    margin-top: rem(6);
   }
 }
 

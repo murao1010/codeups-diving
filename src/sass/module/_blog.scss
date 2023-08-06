@@ -2,10 +2,8 @@
 
 .blog {
   padding-top: rem(80);
-  // padding-bottom: rem(80);
   @include mq('md') {
     padding-top: rem(100);
-    // padding-bottom: rem(100);
     background-image: url(../images/common/Blog-BG.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -16,7 +14,9 @@
 
 .inner.blog__inner {
   padding: 0 rem(20);
-  
+  @include mq('md') {
+    padding: 0 rem(25);
+  }
 }
 
 .blog::before {
@@ -34,9 +34,6 @@
   }
 }
 
-// .blog__inner {
-// }
-
 .blog__title-wrap {
   text-align: center;
 }
@@ -45,7 +42,8 @@
   margin-top: rem(24);
   @include mq('md') {
     margin-top: rem(80);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: rem(40);
   }
 }

@@ -45,11 +45,15 @@
 }
 
 .button:hover {
-  color: $accent;
+  @include mq('md') {
+    color: $accent;
+  }
 }
 
 .button:hover::after {
-  transform: scale(1, 1);
+  @include mq('md') {
+    transform: scale(1, 1);
+  }
 }
 
 .button span {
@@ -67,8 +71,10 @@
 }
 
 .button:hover span{
-  background: url(../images/common/arrow_2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include mq('md') {
+    background: url(../images/common/arrow_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

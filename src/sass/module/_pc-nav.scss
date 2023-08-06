@@ -38,7 +38,6 @@
 
 .pc-nav__item a::before {
   content: attr(data-en);
-  text-transform: capitalize;
   font-family: $second-font-family;
   font-size: rem(18);
   font-weight: $normal;
@@ -51,21 +50,17 @@
 
 .pc-nav__item a::after {
   content: '';
-  /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: rem(23);
   left: 10%;
-  /*線の形状*/
   width: 80%;
   height: 2px;
-  background: $accent;
-  /*アニメーションの指定*/
+  background: $white;
   transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
+  transform: scale(0, 1);
+  transform-origin: center top;
 }
 
-// .pc-nav__item .currenta::after,
 .pc-nav__item a:hover::after {
-    transform: scale(1, 1);/*X方向にスケール拡大*/
+    transform: scale(1, 1);
 }

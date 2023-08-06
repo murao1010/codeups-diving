@@ -61,3 +61,8 @@
 .swiper-button-next::after {
   background-image: url(../images/common/swiper-next.png);
 }
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}
