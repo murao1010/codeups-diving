@@ -23,12 +23,16 @@
   align-items: center;
   padding: rem(21) rem(15);
   @include mq('md') {
-    padding: rem(20) rem(40);
+    padding-top: rem(20);
+    padding-right: rem(20);
+    padding-bottom: rem(20);
+    padding-left: rem(40);
   }
 }
 
 .header__logo {
   width: rem(102);
+  min-width: rem(70);
   z-index: 1000;
   @include mq('md') {
     width: rem(133);

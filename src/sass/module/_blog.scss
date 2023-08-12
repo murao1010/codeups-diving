@@ -6,16 +6,16 @@
     padding-top: rem(100);
     background-image: url(../images/common/Blog-BG.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 60.2%;
     background-position: top center;
     position: relative;
   }
 }
 
 .inner.blog__inner {
-  padding: 0 rem(20);
+  padding: 0 20px;
   @include mq('md') {
-    padding: 0 rem(25);
+    padding: 0 25px;
   }
 }
 

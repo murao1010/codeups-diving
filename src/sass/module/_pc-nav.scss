@@ -29,12 +29,8 @@
   padding-left: rem(20);
   padding-right: rem(20);
   position: relative;
+  white-space: nowrap;
 }
-
-.pc-nav__item:last-child a {
-  padding-right: 0;
-}
-
 
 .pc-nav__item a::before {
   content: attr(data-en);

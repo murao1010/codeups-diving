@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.about__image-wrap {
+.about__container {
   position: relative;
   max-width: rem(1080);
   height: auto;
@@ -79,8 +79,8 @@
     width: calc(840 / 1080 * 100%);
     max-width: rem(840);
     position: absolute;
-    top: 53.8%;
-    left: 55.5%;
+    top: 52.5%;
+    left: 57.3%;
     transform: translate(-50%, -50%);
     z-index: 3;
     display: flex;

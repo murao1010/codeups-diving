@@ -47,6 +47,7 @@
   @include mq('md') {
     aspect-ratio: 492 / 746;
     width: calc(492 / 1080 * 100%);
+    margin-left: rem(96);
   }
 }
 
@@ -120,9 +121,11 @@
   font-weight: $normal;
   line-height: calc(24 / 14);
   color: $black;
+  margin-left: rem(20);
   @include mq('md') {
     font-size: rem(16);
     line-height: calc(24 / 16);
+    margin-left: rem(40);
   }
 }
 

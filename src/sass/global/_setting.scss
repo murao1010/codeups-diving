@@ -49,3 +49,11 @@ body {
 body {
   position: relative;
 }
+
+////////////////////
+// スクロールストップ
+////////////////////
+body.is-active{
+  height: 100%;
+  overflow: hidden;
+}

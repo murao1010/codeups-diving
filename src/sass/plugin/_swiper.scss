@@ -8,10 +8,7 @@
 }
 
 .swiper .swiper-slide {
-  max-width: rem(280);
-  @include mq('md') {
-    max-width: rem(333);
-  }
+  height: auto;
 }
 
 /* 前へ次への矢印カスタマイズ */

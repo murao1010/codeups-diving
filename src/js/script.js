@@ -37,6 +37,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
   let swiper2 = new Swiper(".js-campaign-swiper", {
+    loop: true,
     grabCursor: true,
     slidesPerView: 'auto',
     spaceBetween: 24,
@@ -48,7 +49,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       },
       // スライドの表示枚数：1024px以上の場合
       1024: {
-        slidesPerView: 3.5,
+        slidesPerView: 3.8,
         spaceBetween: 40,
       },
     },
@@ -63,9 +64,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
+      $("body").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
     } else {
       $(".js-hamburger").addClass("is-active");
+      $("body").addClass("is-active");
       $(".js-sp-nav").fadeIn(300);
     }
   });
