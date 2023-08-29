@@ -1,0 +1,50 @@
+@use 'global' as *;
+
+
+.price-block__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+}
+
+.price-block__items {
+  border-top: 1px solid $accent;
+  margin-top: rem(4);
+}
+
+.price-block__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $black;
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(6);
+  }
+}
+
+.price-block__item dt {
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  color: $black;
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+  }
+}
+
+.price-block__item dd {
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  color: $black;
+  margin-left: rem(20);
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    margin-left: rem(40);
+  }
+}
+
+

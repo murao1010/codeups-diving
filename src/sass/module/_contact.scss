@@ -1,12 +1,8 @@
 @use 'global' as *;
 
 .contact {
-  padding-top: rem(80);
-  padding-bottom: rem(102);
   position: relative;
   @include mq('md') {
-    padding-top: rem(150);
-    padding-bottom: rem(150);
   }
 }
 
@@ -19,8 +15,8 @@
   background-size: contain;
   background-position: center;
   position: absolute;
-  top: rem(56);
-  right: 4%;
+  top: rem(-23);
+  right: max(rem(15),calc(50% - rem(671)));
   @include mq('md') {
     content: "";
     width: rem(301);
@@ -29,8 +25,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    top: rem(100);
-    right: 3.47222%;
+    top: rem(-47);
+    right: max(rem(15),calc(50% - rem(671)));
   }
 }
 
@@ -41,7 +37,6 @@
     padding: 0 25px;
   }
 }
-
 
 .contact__contents {
   text-align: center;
@@ -75,7 +70,6 @@
 }
 
 .contact__contact::before {
-
   @include mq('md') {
     content: "";
     height: rem(255);
@@ -86,7 +80,6 @@
     top: rem(-20);
   }
 }
-
 
 .contact__logo {
   padding-bottom: rem(2);
@@ -147,20 +140,9 @@
   height: 100%;
 }
 
-
 .contact__title-wrap {
   text-align: center;
   @include mq('md') {
-  }
-}
-
-.section-title.contact__title::before {
-  font-size: rem(78);
-  margin-top: rem(0);
-  margin-bottom: rem(-14);
-  @include mq('md') {
-    margin-top: rem(0);
-    margin-bottom: rem(-5);
   }
 }
 
@@ -175,4 +157,3 @@
   text-align: center;
   margin-top: rem(40);
 }
-

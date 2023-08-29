@@ -4,6 +4,8 @@
   background-color: $white;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .campaign-card__image {
@@ -26,18 +28,24 @@
   object-fit: cover;
 }
 
-
 .campaign-card__body {
   padding-top: rem(16);
   padding-right: rem(16);
   padding-bottom: rem(16);
   padding-left: rem(16);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 @include mq('md') {
   padding-top: rem(24);
   padding-right: rem(16);
   padding-bottom: rem(24);
   padding-left: rem(16);
   }
+}
+
+.campaing-card__title-block {
+  flex-grow: 1;
 }
 
 .campaign-card__tag {
@@ -63,7 +71,7 @@
   }
 }
 
-.campaign-card__text-block {
+.campaign-card__price-block {
   padding-top: rem(8);
   padding-bottom: rem(8);
   text-align: center;
@@ -104,6 +112,7 @@
     font-size: rem(24);
   }
 }
+
 .campaign-card__price-before::before {
   content: "";
   display: block;

@@ -30,7 +30,7 @@
     background-position: center;
     position: absolute;
     top: rem(24);
-    left: 6.94444%;
+    left: max(rem(15), calc(50% - rem(620)));
   }
 }
 

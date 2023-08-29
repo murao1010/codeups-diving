@@ -12,6 +12,7 @@
   padding-right: rem(15);
   padding-left: rem(15);
   display: none;
+  overflow-y: scroll;
 }
 
 .sp-nav.is-active {
@@ -69,6 +70,8 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(18 / 16);
+  display: inline-block;
+  width: 100%;
 }
 
 .sp-nav__sub-nav-item {

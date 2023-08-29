@@ -29,10 +29,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //Swiper
   let swiper = new Swiper('.js-mv-swiper', {
     loop: true,
+    effect: 'fade',
     slidesPerView: 1,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
     },
+    speed: 2000,
   });
 
 
@@ -45,10 +47,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // スライドの表示枚数：768px以上の場合
       768: {
         slidesPerView: 3.5,
-        spaceBetween: 30,
+        spaceBetween: 26,
       },
-      // スライドの表示枚数：1024px以上の場合
-      1024: {
+      // スライドの表示枚数：1200px以上の場合
+      1200: {
         slidesPerView: 3.8,
         spaceBetween: 40,
       },

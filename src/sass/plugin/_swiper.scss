@@ -1,10 +1,13 @@
 @use 'global' as *;
 
 .swiper {
-  padding-right: rem(58);
+  padding-right: rem(64);
   padding-bottom: rem(10);
   padding-top: rem(10);
   position: relative;
+  @include mq('md') {
+    padding-right: rem(58);
+  }
 }
 
 .swiper .swiper-slide {
