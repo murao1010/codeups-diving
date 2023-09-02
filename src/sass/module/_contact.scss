@@ -34,6 +34,7 @@
   padding: 0 40px;
   @include mq('md') {
     max-width: rem(1130);
+    width: 100%;
     padding: 0 25px;
   }
 }
@@ -111,6 +112,7 @@
   line-height: 1.7;
   color: $black;
   text-align: center;
+  white-space: nowrap;
   @include mq('md') {
     text-align: left;
   }

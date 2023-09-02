@@ -47,6 +47,7 @@
   letter-spacing: 0.54em;
   text-indent: 0.54em;
   line-height: calc(48 / 40);
+  font-weight: 400;
   @include mq('md') {
     font-size: rem(80);
     line-height: calc(100 / 80);

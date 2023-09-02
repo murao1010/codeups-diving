@@ -29,6 +29,7 @@
 .about__container {
   position: relative;
   max-width: rem(1080);
+  width: 100%;
   height: auto;
   margin-top: rem(24);
   @include mq('md') {
@@ -64,10 +65,11 @@
   z-index: -1;
   aspect-ratio: 281 / 186;
   overflow: hidden;
-  max-width: rem(281);
+  width: 82%;
   margin-right: 0;
   margin-left: auto;
   @include mq('md') {
+    width: 100%;
     margin-top: rem(80);
     max-width: rem(880);
     aspect-ratio: 880 / 581;
@@ -108,6 +110,7 @@
     font-size: rem(80);
     font-weight: $normal;
     line-height: calc(100 / 80);
+    white-space: nowrap;
   }
 }
 

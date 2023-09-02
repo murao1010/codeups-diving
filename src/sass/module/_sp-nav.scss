@@ -9,10 +9,7 @@
   height: 100vh;
   background-color: $accent;
   padding-top: rem(64);
-  padding-right: rem(15);
-  padding-left: rem(15);
   display: none;
-  overflow-y: scroll;
 }
 
 .sp-nav.is-active {
@@ -21,6 +18,10 @@
 
 .sp-nav__items {
   display: flex;
+  padding-right: rem(15);
+  padding-left: rem(15);
+  overflow-y: scroll;
+  height: calc(100% - #{rem(15)});
 }
 
 .sp-nav__left-column {
