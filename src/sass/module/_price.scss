@@ -26,10 +26,6 @@
   }
 }
 
-.price__title-wrap {
-  text-align: center;
-}
-
 .price__contents {
   margin-top: rem(25);
   @include mq('md') {
@@ -51,20 +47,10 @@
   }
 }
 
-.price__image-pc {
-  display: none;
-  @include mq('md') {
-    display: block;
-  }
-}
-
-.price__image-sp {
+.price__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @include mq('md') {
-    display: none;
-  }
 }
 
 .price__content {
@@ -83,7 +69,7 @@
 }
 
 .price__button-wrap {
-  margin-top: rem(35);
+  margin-top: rem(39);
   text-align: center;
   @include mq('md') {
     margin-top: rem(80);

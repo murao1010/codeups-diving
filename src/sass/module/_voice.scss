@@ -37,10 +37,6 @@
   }
 }
 
-.voice__title-wrap {
-  text-align: center;
-}
-
 .voice__items {
   margin-top: rem(40);
   @include mq('md') {
@@ -50,9 +46,9 @@
 
 .voice__button-wrap {
   text-align: center;
-  margin-top: rem(42);
+  margin-top: rem(37);
   @include mq('md') {
-    margin-top: rem(80);
+    margin-top: rem(85);
   }
 }
 

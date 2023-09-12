@@ -7,24 +7,14 @@
   overflow: hidden
 }
 
-.mv__image-pc {
-  display: none;
-  @include mq('md') {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
+.mv__image {
+  height: 100vh;
 }
 
-.mv__image-sp {
-  display: block;
+.mv__image img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  @include mq('md') {
-    display: none;
-  }
 }
 
 .mv__header {

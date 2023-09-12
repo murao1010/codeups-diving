@@ -2,19 +2,6 @@
 
 .section-title {
   text-align: center;
-  display: inline-block;
-}
-
-.section-title--white {
-  @include mq('md') {
-    color: $white;
-  }
-}
-
-.section-title--white::first-letter {
-  @include mq('md') {
-    color: $white;
-  }
 }
 
 .section-title__en {
@@ -58,7 +45,25 @@
   }
 }
 
-.section-title__jp--contact {
+.section-title--white .section-title__en {
+  @include mq('md') {
+    color: $white;
+  }
+}
+
+.section-title--white .section-title__en::first-letter {
+  @include mq('md') {
+    color: $white;
+  }
+}
+
+.section-title--white .section-title__jp {
+  @include mq('md') {
+    color: $white;
+  }
+}
+
+.section-title__jp.section-title__jp--contact {
   margin-top: rem(0);
   @include mq('md') {
     margin-top: rem(8);

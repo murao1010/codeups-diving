@@ -156,31 +156,44 @@
           </li>
         </ul>
       </nav>
-
     </div>
   </header>
   <main>
     <!-- ファーストビュー -->
-    <section class="mv js-mv-height">
-      <div class="mv__container">
-        <!-- Swiper -->
-        <div class=" js-mv-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="mv__image-pc" src="./assets/images/common/MV-PC_1.jpg" alt="綺麗な海を泳ぐウミガメ">
-              <img class="mv__image-sp" src="./assets/images/common/MV-SP_1.jpg" alt="綺麗な海を泳ぐウミガメ">
+    <section class="mv">
+      <!-- Swiper -->
+      <div class="js-mv-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="mv__image">
+              <picture>
+                <source srcset="./assets/images/common/MV-PC_1.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/MV-SP_1.jpg" alt="綺麗な海を泳ぐウミガメ">
+              </picture>
             </div>
-            <div class="swiper-slide">
-              <img class="mv__image-pc" src="./assets/images/common/MV-PC_2.jpg" alt="海を泳ぐウミガメとダイバー">
-              <img class="mv__image-sp" src="./assets/images/common/MV-SP_2.jpg" alt="海を泳ぐウミガメとダイバー">
+          </div>
+          <div class="swiper-slide">
+            <div class="mv__image">
+              <picture>
+                <source srcset="./assets/images/common/MV-PC_2.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/MV-SP_2.jpg" alt="海を泳ぐウミガメとダイバー">
+              </picture>
             </div>
-            <div class="swiper-slide">
-              <img class="mv__image-pc" src="./assets/images/common/MV-PC_3.jpg" alt="海と山と青い空">
-              <img class="mv__image-sp" src="./assets/images/common/MV-SP_3.jpg" alt="海と山と青い空">
+          </div>
+          <div class="swiper-slide">
+            <div class="mv__image">
+              <picture>
+                <source srcset="./assets/images/common/MV-PC_3.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/MV-SP_3.jpg" alt="海と山と青い空">
+              </picture>
             </div>
-            <div class="swiper-slide">
-              <img class="mv__image-pc" src="./assets/images/common/MV-PC_4.jpg" alt="白い砂浜と綺麗な海">
-              <img class="mv__image-sp" src="./assets/images/common/MV-SP_4.jpg" alt="白い砂浜と綺麗な海">
+          </div>
+          <div class="swiper-slide">
+            <div class="mv__image">
+              <picture>
+                <source srcset="./assets/images/common/MV-PC_3.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/MV-SP_3.jpg" alt="白い砂浜と綺麗な海">
+              </picture>
             </div>
           </div>
         </div>
@@ -193,18 +206,16 @@
     <!-- キャンペーン -->
     <section class="campaign top-campaign">
       <div class="campaign__inner inner">
-        <div class="campaign__title-wrap">
-          <div class="campaign__title section-title">
-            <p class="section-title__en">campaign</p>
-            <h2 class="section-title__jp">キャンペーン</h2>
-          </div>
+        <div class="campaign__title section-title">
+          <p class="section-title__en">campaign</p>
+          <h2 class="section-title__jp">キャンペーン</h2>
         </div>
         <div class="campaign__content">
-          <div class="campaign__items">
-            <!-- Swiper -->
-            <div class="swiper js-campaign-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide campaign-card">
+          <!-- Swiper -->
+          <div class="swiper js-campaign-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide campaign__item">
+                <div class="campaign-card">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/Campaign_1.jpg" alt="熱帯魚の群れ">
                   </div>
@@ -222,7 +233,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign-card">
+              </div>
+              <div class="swiper-slide campaign__item">
+                <div class="campaign-card">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/Campaign_2.jpg" alt="綺麗な海">
                   </div>
@@ -240,7 +253,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign-card">
+              </div>
+              <div class="swiper-slide campaign__item">
+                <div class="campaign-card">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/Campaign_3.jpg" alt="クラゲの群れ">
                   </div>
@@ -258,7 +273,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign-card">
+              </div>
+              <div class="swiper-slide campaign__item">
+                <div class="campaign-card">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/Campaign_4.jpg" alt="クラゲの群れ">
                   </div>
@@ -278,10 +295,10 @@
                 </div>
               </div>
             </div>
-            <!-- 前後の矢印 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
+          <!-- 前後の矢印 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
         <div class="campaign__button-wrap">
           <a href="#" class="button">View more<span></span></a>
@@ -291,11 +308,9 @@
     <!-- 私たちについて -->
     <section class="about top-about">
       <div class="about__inner inner">
-        <div class="about__title-wrap">
-          <div class="about__title section-title">
-            <p class="section-title__en">about us</p>
-            <h2 class="section-title__jp">私たちについて</h2>
-          </div>
+        <div class="about__title section-title">
+          <p class="section-title__en">about us</p>
+          <h2 class="section-title__jp">私たちについて</h2>
         </div>
         <div class="about__container">
           <div class="about__images">
@@ -327,11 +342,9 @@
     <!-- ダイビング情報 -->
     <section class="information top-information">
       <div class="information__inner inner">
-        <div class="information__title-wrap">
-          <div class="information__title section-title">
-            <p class="section-title__en">information</p>
-            <h2 class="section-title__jp">ダイビング情報</h2>
-          </div>
+        <div class="information__title section-title">
+          <p class="section-title__en">information</p>
+          <h2 class="section-title__jp">ダイビング情報</h2>
         </div>
         <div class="information__contents">
           <div class="information__image js-image-effect">
@@ -355,11 +368,9 @@
     <!-- ブログ -->
     <section class="blog top-blog">
       <div class="blog__inner inner">
-        <div class="blog__title-wrap">
-          <div class="blog__title section-title">
-            <p class="section-title__en section-title--white">blog</p>
-            <h2 class="section-title__jp section-title--white">ブログ</h2>
-          </div>
+        <div class="blog__title section-title section-title--white">
+          <p class="section-title__en">blog</p>
+          <h2 class="section-title__jp">ブログ</h2>
         </div>
         <div class="blog__items blog-cards">
           <a href="#" class="blog-cards__item blog-card">
@@ -422,11 +433,9 @@
     <!-- お客様の声 -->
     <section class="voice top-voice">
       <div class="voice__inner inner">
-        <div class="voice__title-wrap">
-          <div class="voice__title section-title">
-            <p class="section-title__en">voice</p>
-            <h2 class="section-title__jp">お客様の声</h2>
-          </div>
+        <div class="voice__title section-title">
+          <p class="section-title__en">voice</p>
+          <h2 class="section-title__jp">お客様の声</h2>
         </div>
         <div class="voice__items voice-cards">
           <a href="#" class="voice-cards__item voice-card">
@@ -484,16 +493,16 @@
     <!-- 料金一覧 -->
     <section class="price top-price">
       <div class="price__inner inner">
-        <div class="price__title-wrap">
-          <div class="price__title section-title">
-            <p class="section-title__en">price</p>
-            <h2 class="section-title__jp">料金一覧</h2>
-          </div>
+        <div class="price__title section-title">
+          <p class="section-title__en">price</p>
+          <h2 class="section-title__jp">料金一覧</h2>
         </div>
         <div class="price__contents">
           <div class="price__image js-image-effect">
-            <img class="price__image-pc" src="./assets/images/common/Price.jpg" alt="PC用画像">
-            <img class="price__image-sp" src="./assets/images/common/Price-SP.jpg" alt="スマホ用画像">
+            <picture>
+              <source srcset="./assets/images/common/Price.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/common/Price-SP.jpg" alt="PCのときは珊瑚と小魚、スマホの時はウミガメ">
+            </picture>
           </div>
           <div class="price__content">
             <div class="price__block price-block">
@@ -605,7 +614,7 @@
                 <h2 class="section-title__jp section-title__jp--contact">お問い合わせ</h2>
               </div>
             </div>
-            <a href="#" class="contact__link">ご予約・お問い合わせはコチラ</a>
+            <p class="contact__link">ご予約・お問い合わせはコチラ</p>
             <div class="contact__button-wrap">
               <a href="#" class="button">Contact us<span></span></a>
             </div>

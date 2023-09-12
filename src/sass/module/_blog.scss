@@ -34,10 +34,6 @@
   }
 }
 
-.blog__title-wrap {
-  text-align: center;
-}
-
 .blog__items {
   margin-top: rem(24);
   @include mq('md') {

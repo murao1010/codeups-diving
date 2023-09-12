@@ -118,13 +118,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ヘッダークラス名付与 MV以下で色付け
   let header = $('.header')
   let headerHeight = $('.header').height();
-  let height = $('.js-mv-height').height();
+  let height = $('.mv').height();
   $(window).scroll(function () {
     if ($(this).scrollTop() > (height - headerHeight)) {
-      // 指定px以上のスクロールでボタンを表示
+      // 指定px以上のスクロールでヘッダーに色付け
       header.addClass('is-color');
     } else {
-      // 画面が指定pxより上ならボタンを非表示
+      // 画面が指定pxより上なら色なし
       header.removeClass('is-color');
     }
   });
