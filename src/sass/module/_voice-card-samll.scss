@@ -1,0 +1,35 @@
+@use 'global' as *;
+
+.voice-card-small {
+  display: inline-block;
+}
+
+.voice-card-small__image {
+  width: 100%;
+  aspect-ratio: 294 / 218;
+  overflow: hidden;
+}
+
+.voice-card-small__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voice-card-small__body {
+  margin-top: rem(16);
+}
+
+.voice-card-small__age-sex {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: calc(18 / 12);
+}
+
+.voice-card-small__title {
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: calc(35 / 24);
+  margin-top: rem(8);
+}
+

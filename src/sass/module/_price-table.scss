@@ -1,0 +1,115 @@
+@use 'global' as *;
+
+.price-table {
+  display: flex;
+  flex-direction: column;
+  @include mq('md') {
+    flex-direction: row;
+    max-width: rem(702);
+    width: 100%;
+  }
+}
+
+.price-table-title__block {
+  background-color: $accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  @include mq('md') {
+    flex-direction: column-reverse;
+    width: rem(200);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.price-table__title {
+  color: $white;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: calc(24 / 16);
+  margin-left: rem(8);
+}
+
+.price-table__icon {
+  display: inline-block;
+  width: rem(24);
+  height: rem(24);
+  @include mq('md') {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.price-table__items {
+  @include mq('md') {
+    width: calc(100% - rem(200));
+  }
+}
+
+.price-table__item {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: rem(60);
+  width: 100%;
+  @include mq('md') {
+    height: auto;
+  }
+}
+
+.price-table__item dt {
+  width: 69%;
+  height: 100%;
+  border-bottom: 1px solid $accent;
+  border-left: 1px solid $accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(24 / 16);
+  @include mq('md') {
+    border-left: none;
+    width: calc(100% - rem(162));
+    justify-content: start;
+    padding-left: rem(16);
+    padding-top: rem(17);
+    padding-bottom: rem(17);
+  }
+}
+
+.price-table__item:first-child dt {
+  @include mq('md') {
+    border-top: 1px solid $accent;
+  }
+}
+
+.price-table__item:first-child dd {
+  @include mq('md') {
+    border-top: 1px solid $accent;
+  }
+}
+
+
+.price-table__item dd {
+  width: 31%;
+  height: 100%;
+  border-bottom: 1px solid $accent;
+  border-left: 1px solid $accent;
+  border-right: 1px solid $accent;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: rem(16);
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(24 / 16);
+  @include mq('md') {
+    width: rem(162);
+    padding-top: rem(17);
+    padding-bottom: rem(17);
+  }
+}

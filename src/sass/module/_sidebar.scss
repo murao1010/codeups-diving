@@ -1,0 +1,46 @@
+@use 'global' as *;
+
+.sidebar__block:nth-child(n + 2) {
+  margin-top: rem(80);
+}
+
+.sidebar__title {
+  display: flex;
+  align-items: center;
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: calc(35 / 24);
+  padding-left: rem(24);
+  position: relative;
+}
+
+.sidebar__title::before {
+  content: "";
+  width: rem(8);
+  height: rem(50);
+  background-color: $accent;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar__title span {
+  display: inline-block;
+  width: rem(50);
+  height: rem(50);
+  margin-right: rem(8);
+  background: url(../images/common/License-course_icon_off.svg) no-repeat center center/cover;
+}
+
+.sidebar__button-wrap {
+  text-align: center;
+  margin-top: rem(44);
+}
+
+.sidebar__button-wrap--campaign {
+  margin-top: rem(35);
+  @include mq('md') {
+    margin-top: rem(44);
+  }
+}

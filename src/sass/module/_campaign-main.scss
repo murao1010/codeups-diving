@@ -1,0 +1,42 @@
+@use 'global' as *;
+
+.campaign-main {
+  position: relative;
+}
+
+.campaign-main::before {
+  content: "";
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/illust_fish-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: rem(-25);
+  left: max(rem(15), calc(50% - rem(620)));
+  @include mq('md') {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+  }
+}
+
+
+.campaign-main__contents {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(40);
+  margin-top: rem(40);
+  padding-left: rem(33);
+  padding-right: rem(33);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq('md') {
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(80);
+    column-gap: rem(40);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

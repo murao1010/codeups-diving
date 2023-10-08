@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.popular-article__items {
+  margin-top: rem(22);
+}
+
+.popular-article__item:nth-child(n + 2) {
+  margin-top: rem(24);
+}

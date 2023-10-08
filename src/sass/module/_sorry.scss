@@ -1,0 +1,64 @@
+@use 'global' as *;
+
+.sorry {
+  text-align: center;
+  position: relative;
+}
+
+.sorry::before {
+  content: "";
+  width: rem(329);
+  height: rem(294);
+  background-image: url(../images/common/big-whale.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: rem(-24);
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq('md') {
+    left: max(rem(15), calc(50% - rem(510)));
+    width: rem(665);
+    height: rem(594);
+    top: rem(25);
+    transform: initial;
+  }
+}
+
+.sorry__title {
+  font-family: $third-font-family;
+  color: $white;
+  z-index: 2;
+  position: relative;
+  font-size: rem(80);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  @include mq('md') {
+    font-size: rem(160);
+  }
+}
+
+.sorry__text-block {
+  margin-top: rem(-5);
+  @include mq('md') {
+    margin-top: rem(24);
+  }
+}
+
+.sorry__text {
+  font-family: $third-font-family;
+  font-size: rem(16);
+  font-weight: 400;
+  color: $white;
+  line-height: calc(24 / 16);
+}
+
+.sorry__button-wrap {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

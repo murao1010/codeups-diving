@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+.lower-sorry {
+  padding-top: rem(54);
+  padding-bottom: rem(40);
+  @include mq('md') {
+    padding-top: rem(120);
+    padding-bottom: rem(150);
+  }
+}

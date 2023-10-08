@@ -1,0 +1,112 @@
+@use 'global' as *;
+
+.information-main {
+  position: relative;
+}
+
+.information-main::before {
+  content: "";
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/illust_fish-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: rem(-93);
+  left: max(rem(15), calc(50% - rem(620)));
+  z-index: -1;
+  @include mq('md') {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+  }
+}
+
+.information-main__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.information-main__switch:checked+.information-main__label {
+  background: #408F95;
+  color: $white;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.information-main__switch:checked+.information-main__label.information-main__label--license span {
+  background: url(../images/common/License-course_icon.svg) no-repeat center center/cover;
+}
+
+.information-main__switch:checked+.information-main__label.information-main__label--fun span {
+  background: url(../images/common/Fun-diving_icon.svg) no-repeat center center/cover;
+}
+
+.information-main__switch:checked+.information-main__label.information-main__label--trial span {
+  background: url(../images/common/Trial-diving_icon.svg) no-repeat center center/cover;
+}
+
+.information-main__switch:checked+.information-main__label+.information-main__content {
+  display: block;
+}
+
+.information-main__label {
+  color: #408F95;
+  background: #DDF0F1;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1;
+  width: rem(102);
+  height: rem(60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: -1;
+  padding: rem(10);
+  text-align: center;
+  line-height: calc(20 / 14);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  @include mq('md') {
+    width: rem(300);
+    height: rem(90);
+    font-size: rem(24);
+    line-height: 1;
+    box-shadow: initial;
+  }
+}
+
+.information-main__label span {
+  @include mq('md') {
+    width: rem(64);
+    height: rem(64);
+    margin-right: rem(8);
+    fill: #408F95;
+  }
+}
+
+.information-main__label.information-main__label--license span {
+  background: url(../images/common/License-course_icon_off.svg) no-repeat center center/cover;
+}
+
+.information-main__label.information-main__label--fun span {
+  background: url(../images/common/Fun-diving_icon_off.svg) no-repeat center center/cover;
+}
+
+.information-main__label.information-main__label--trial span {
+  background: url(../images/common/Trial-diving_icon_off.svg) no-repeat center center/cover;
+}
+
+.information-main__content {
+  width: 100%;
+  display: none;
+  margin-top: rem(15);
+  @include mq('md') {
+    margin-top: rem(24);
+  }
+}
+
+/* ラジオボタン非表示 */
+.information-main__switch {
+  display: none;
+}

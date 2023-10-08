@@ -1,0 +1,194 @@
+@use 'global' as *;
+
+.campaign-main-card {
+  background-color: $white;
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign-main-card__image {
+  position: relative;
+}
+
+.campaign-main-card__image::before {
+  content: "";
+  display: block;
+  padding-top: calc(188 / 280 * 100%);
+}
+
+.campaign-main-card__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-main-card__body {
+  padding-top: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+@include mq('md') {
+  padding-top: rem(24);
+  padding-right: rem(24);
+  padding-bottom: rem(42);
+  padding-left: rem(24);
+  }
+}
+
+.campaign-main-card__title-block {
+  // flex-grow: 1;
+}
+
+.campaign-main-card__tag {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: calc(22 / 12);
+  color: $accent;
+  padding: rem(3) rem(11);
+  border: 1px solid $accent;
+  @include mq('md') {
+    padding: rem(5) rem(15);
+  }
+}
+
+.campaign-main-card__title {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 /16);
+  margin-top: rem(4);
+  @include mq('md') {
+    margin-top: rem(2);
+    font-size: rem(24);
+  }
+}
+
+.campaign-main-card__price-block {
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  text-align: center;
+  border-top: 1px solid $accent;
+  margin-top: rem(7);
+  @include mq('md') {
+    margin-top: rem(2);
+    padding-top: rem(10);
+    padding-bottom: rem(17);
+  }
+}
+
+.campaign-main-card__text {
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 /14);
+  flex-grow: 1;
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(24 /16);
+    margin-top: rem(14);
+  }
+}
+
+.campaign-main-card__price-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: rem(8);
+}
+
+.campaign-main-card__price-before {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(20 / 20);
+  font-family: $third-font-family;
+  position: relative;
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.campaign-main-card__price-before::before {
+  content: "";
+  display: block;
+  width: rem(76);
+  height: rem(3);
+  background-color: #C94800;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq('md') {
+    width: rem(91);
+  }
+}
+
+.campaign-main-card__price-after {
+  margin-left: rem(16);
+  font-size: rem(32);
+  font-weight: $bold;
+  line-height: calc(32 / 32);
+  color: $accent;
+  font-family: $third-font-family;
+  @include mq('md') {
+    margin-left: rem(42);
+    font-size: rem(40);
+    line-height: calc(40 / 40);
+  }
+}
+
+.campaign-main-card__text-block {
+  display: none;
+  @include mq('md') {
+    display: block;
+    margin-top: rem(7);
+    flex-grow: 1;
+  }
+}
+
+.campaign-main-card__text2 {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(24 / 16);
+}
+
+.campaign-main-card__info {
+  display: none;
+  @include mq('md') {
+    display: block;
+    margin-top: rem(32);
+    text-align: center;
+  }
+}
+
+.campaign-main-card__info-date {
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: calc(18 / 16);
+  color: $accent;
+  font-family: $third-font-family;
+}
+
+.campaign-main-card__info-text {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: calc(18 / 14);
+  color: $accent;
+  margin-top: rem(7);
+}
+
+.campaign-main-card__button-wrap {
+  display: none;
+  @include mq('md') {
+    display: block;
+    text-align: center;
+    margin-top: rem(16);
+  }
+}

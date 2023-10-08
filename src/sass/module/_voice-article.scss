@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.voice-article__items {
+  margin-top: rem(25);
+}
+
+.voice-article__item:nth-child(n + 2) {
+  margin-top: rem(24);
+}

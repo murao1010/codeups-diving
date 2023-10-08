@@ -1,5 +1,20 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  // !!!ファーストビューローディングの処理（検証中）!!!
+  // $(document).ready(function () {
+
+  //   var scrollPosition = $(window).scrollTop(); // 現在のスクロール位置を保存
+  //   $('body').css('overflow', 'hidden'); // 背景のスクロールを無効にする
+  //   $('.js-loading').delay(3000).fadeOut(2000, function () {
+  //     $('body').css('overflow', 'auto'); // アニメーション終了後に背景のスクロールを有効化する
+  //     window.location.hash = 'scroll=' + scrollPosition; // スクロール位置をURLのハッシュに追加
+  //   });
+  //   $('.js-loading').css('display', 'block');
+  //   $('.js-mask, .js-loading').delay(3000).fadeOut(2000);
+  //   $('body').css('display', 'block');
+
+  // });
+
   // 要素の取得とスピードの設定
   var box = $('.js-image-effect');
   var speed = 700;
@@ -127,5 +142,79 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // 画面が指定pxより上なら色なし
       header.removeClass('is-color');
     }
+  });
+
+  //モーダル
+  $(".js-gallery img").click(function () {
+    // まず、クリックした画像の HTML(<img>タグ全体)を#gallery__gray-display内にコピー
+    $("#gallery__gray-display").html($(this).prop("outerHTML"));
+    //そして、fadeInで表示する。
+    $("#gallery__gray-display").fadeIn(200);
+    $('html, body').css('overflow', 'hidden');
+    return false;
+  });
+
+  // コース画像モーダル非表示イベント
+  // モーダル画像背景 または 拡大画像そのものをクリックで発火
+  $("#gallery__gray-display").click(function () {
+    // 非表示にする
+    $("#gallery__gray-display").fadeOut(200);
+    $('html, body').removeAttr('style');
+    return false;
+  });
+
+  $(function () {
+    // 最初の要素にデフォルトで"active"クラスを付与
+    $(".voice-main__category-list:first").addClass("active");
+
+    $(".voice-main__category-list").click(function () {
+      // すべての要素から"active"クラスを削除
+      $(".voice-main__category-list").not(this).removeClass("active");
+
+      // クリックした要素に"active"クラスを付与または削除
+      $(this).toggleClass("active");
+    });
+  });
+
+  //アコーディオン
+  jQuery('.qa__head').on('click', function () {
+    jQuery(this).next().slideToggle();
+    jQuery(this).children('.qa__head').toggleClass('is-open');
+  });
+
+
+
+
+  $(document).ready(function () {
+    $('#js-form').submit(function (event) {
+      // フォームの必須項目を確認
+      var nameInput = $('#name').val();
+      var email = $('#email').val();
+      var tel = $('#tel').val();
+      var checkbox = $('#checkbox').prop('checked'); // チェックボックスの場合はcheckedプロパティを取得
+      var textarea = $('#textarea').val();
+
+      if (nameInput === '' || email === '' || tel === '' || !checkbox || textarea === '') {
+        $('.contact-main__text').css('display', 'block');
+
+        // 必須項目が空の場合、背景と枠を赤くする
+        if (nameInput === '') {
+          $('#name').css({
+            "background": "rgba(201, 72, 0, 0.20)",
+            "border": "1px solid #C94800",
+          });
+          // placeholderの色を変更
+          // $('#name input').attr('placeholder', ' ').css({
+          //   "color": "#FFF"  // プレースホルダの色を白に変更
+          // });
+        } else {
+          $('#name').css('background', '#FFF');
+        }
+
+        // email, tel, checkbox, textarea に対する同様の処理を追加
+
+        event.preventDefault(); // フォームの送信を防ぐ
+      }
+    });
   });
 });

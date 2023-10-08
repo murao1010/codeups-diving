@@ -1,0 +1,66 @@
+@use 'global' as *;
+
+.qa__head {
+  padding-top: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  background-color: $accent;
+  position: relative;
+  @include mq('md') {
+    padding-top: rem(25);
+    padding-right: rem(100);
+    padding-bottom: rem(25);
+    padding-left: rem(40);
+  }
+}
+
+.qa__head::after {
+  content: "";
+  width: rem(28);
+  height: 1px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: rem(16);
+  @include mq('md') {
+    width: rem(32);
+    right: rem(40);
+  }
+}
+
+
+.qa__head-text {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(29 / 20);
+  color: $white;
+  @include mq('md') {
+    font-size: rem(20);
+  }
+}
+
+
+
+.qa__body {
+  padding-top: rem(24);
+  padding-right: rem(16);
+  padding-bottom: rem(24);
+  padding-left: rem(16);
+  border: 1px solid $accent;
+  @include mq('md') {
+    margin-top: rem(16);
+    padding-top: rem(40);
+    padding-right: rem(40);
+    padding-bottom: rem(40);
+    padding-left: rem(40);
+  }
+}
+
+.qa__body-text {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(23 / 16);
+}
+

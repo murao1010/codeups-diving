@@ -78,3 +78,49 @@
     background-position: center;
   }
 }
+
+// コンタクトフォームの送信ボタン用modifier
+.button--send {
+  padding-left: rem(53);
+}
+
+.button--send span {
+  right: rem(57);
+}
+
+//ホワイト.Ver
+.button.button--white {
+  color: $accent;
+  background-color: $white;
+  border: 1px solid $white;
+}
+
+.button.button--white:hover {
+  @include mq('md') {
+    color: $white;
+  }
+}
+
+.button.button--white::before {
+  border: 1px solid $white;
+}
+
+.button--white::after {
+  background: $accent;
+}
+
+.button--white span {
+  background: url(../images/common/arrow_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.button--white:hover span {
+  @include mq('md') {
+    background: url(../images/common/arrow_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

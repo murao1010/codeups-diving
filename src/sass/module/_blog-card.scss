@@ -10,12 +10,13 @@
   padding-left: rem(16);
 }
 
-.blog-card:hover {
-  opacity: 0.7;
-}
+// .blog-card:hover {
+//   opacity: 0.7;
+// }
 
 .blog-card__image {
   position: relative;
+  overflow: hidden;
 }
 
 .blog-card__image::before {
@@ -32,6 +33,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: .3s;
+}
+
+.blog-card:hover .blog-card__image img {
+  transform: translate(-50%,-50%) scale(1.1);
 }
 
 .blog-card__body {

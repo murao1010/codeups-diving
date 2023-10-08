@@ -1,0 +1,79 @@
+@use 'global' as *;
+
+.terms {
+  position: relative;
+}
+
+.terms::before {
+  content: "";
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/illust_voice_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: rem(-24);
+  left: max(rem(15), calc(50% - rem(620)));
+  @include mq('md') {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+  }
+}
+
+.inner.terms__inner {
+  @include mq('md') {
+    max-width: rem(850);
+    width: 100%;
+  }
+}
+
+.terms__title {
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: calc(35 / 24);
+  @include mq('md') {
+    font-size: rem(32);
+    line-height: calc(46 / 32);
+  }
+}
+
+.terms__wrap {
+  margin-top: rem(40);
+}
+
+.terms__tex-block {
+  margin-top: rem(32);
+}
+
+.terms__text-lists {
+  counter-reset: count 0;
+}
+
+.terms__text-list {
+  padding-left: rem(22);
+  text-indent: rem(-16);
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(32 / 16);
+  letter-spacing: 0.01em;
+  @include mq('md') {
+    letter-spacing: 0;
+  }
+}
+
+.terms__text-list::before {
+  content: counter(count)".";
+  counter-increment: count 1;
+}
+
+.terms__text {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: calc(32 / 16);
+}
+
+.terms__text.terms__text--mt {
+  margin-top: rem(30);
+}

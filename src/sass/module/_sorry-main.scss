@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+.sorry-main {
+  background-color: $accent;
+  padding-top: rem(80);
+  @include mq('md') {
+    padding-top: rem(90);
+  }
+}
+

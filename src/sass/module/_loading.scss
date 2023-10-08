@@ -1,0 +1,143 @@
+@use 'global' as *;
+
+// !!!検証中!!!
+.loading {
+  display: none;
+  @include mq('md') {
+    display: block;
+    position: relative;
+  }
+}
+
+.loading__wrapper {
+  @include mq('md') {
+    align-content: center;
+    background-color: #fff;
+    bottom: 0;
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    place-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 2s;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
+.loading__inner {
+  @include mq('md') {
+    // height: rem(133);
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: rem(496);
+    text-align: center;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 55.6%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.loading__main {
+  @include mq('md') {
+    color: $accent;
+    font-family: $third-font-family;
+    text-indent: 0.54em;
+    font-weight: 400;
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    letter-spacing: 0.525em;
+    text-indent: 0.525em;
+  }
+}
+
+.loading__sub {
+  @include mq('md') {
+    color: $accent;
+    font-size: rem(20);
+    font-family: $second-font-family;
+    line-height: calc(33 / 20);
+  }
+}
+
+.loading__mask {
+  @include mq('md') {
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.loading__mask.is-hidden {
+  @include mq('md') {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading__img-left {
+  @include mq('md') {
+    aspect-ratio: 720 / 768;
+    height: 100vh;
+    width: 50%;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+  }
+}
+
+.loading__img-left--fadeUp1 {
+  @include mq('md') {
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-name: fadeUpAnime1;
+    opacity: 0;
+  }
+}
+
+.loading__img-right {
+  @include mq('md') {
+    aspect-ratio: 720 / 768;
+    height: 100vh;
+    width: 50%;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+  }
+}
+
+.loading__img-right--fadeUp2 {
+  @include mq('md') {
+    animation-delay: 0.5s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeUpAnime2;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUpAnime1 {
+  0% {
+    opacity: 1;
+    transform: translateY(rem(1500));
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnime2 {
+  0% {
+    opacity: 1;
+    transform: translateY(rem(1500));
+  }
+  100% {
+    opacity: 1;
+  }
+}

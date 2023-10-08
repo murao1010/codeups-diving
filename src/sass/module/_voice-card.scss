@@ -78,9 +78,11 @@
   margin-left: rem(13);
   width: 50%;
   position: relative;
+  margin-top: rem(10);
   @include mq('md') {
     width: calc(180 / 472 * 100%);
     margin-left: rem(16);
+    margin-top: 0;
   }
 }
 

@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.campaign-article__items {
+  margin-top: rem(27);
+}
+
+.campaign-article__item:nth-child(n + 2) {
+  margin-top: rem(35);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+

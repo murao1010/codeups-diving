@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.breadcrumb {
+
+}
+
+.breadcrumb__text {
+  font-size: rem(14);
+}
+
+.breadcrumb__text--white {
+  color: $white;
+}

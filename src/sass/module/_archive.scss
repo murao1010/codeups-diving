@@ -1,0 +1,69 @@
+@use 'global' as *;
+
+.archive__wrap {
+  margin-top: rem(27);
+}
+
+.archive__year {
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: calc(35 / 24);
+  color: $accent;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.archive__year::before {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.archive__year--open::before {
+  background: url(../images/common/triangle-open.png) no-repeat center center/contain;
+}
+
+.archive__year--close::before {
+  background: url(../images/common/triangle-close.png) no-repeat center center/contain;
+}
+
+.archive__year--close {
+  position: relative;
+}
+
+.archive__year:nth-child(n+2) {
+  margin-top: rem(5);
+}
+
+.archive__lists {
+  margin-left: rem(26);
+  margin-top: rem(2);
+}
+
+.archive__month {
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: calc(35 / 24);
+  color: $accent;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.archive__month::before {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  background: url(../images/common/triangle-close.png) no-repeat center center/contain;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.archive__month:nth-child(n+2) {
+  margin-top: rem(3);
+}

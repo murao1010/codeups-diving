@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+.blog-main {
+  position: relative;
+}
+
+.blog-main::before {
+  content: "";
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/illust_fish-left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: rem(-25);
+  left: max(rem(15), calc(50% - rem(620)));
+  z-index: -1;
+  @include mq('md') {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+  }
+}
+
+.blog-main__content {
+  @include mq('md') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-main__articles {
+  @include mq('md') {
+    width: calc(100% - rem(80) - rem(294));
+  }
+}
+
+.blog-main__article {
+  @include mq('md') {
+    margin-top: rem(-12);
+    width: rem(700);
+  }
+}
+
+.blog-main__sidebar {
+  margin-top: rem(80);
+  padding-left: rem(25);
+  padding-right: rem(25);
+  @include mq('md') {
+    margin-top: 0;
+    width: rem(294);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+  }
+}
