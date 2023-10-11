@@ -1,20 +1,36 @@
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
 
-  // !!!ファーストビューローディングの処理（検証中）!!!
-  // $(document).ready(function () {
+  // この中であればWordpressでも「$」が使用可能になる
 
-  //   var scrollPosition = $(window).scrollTop(); // 現在のスクロール位置を保存
-  //   $('body').css('overflow', 'hidden'); // 背景のスクロールを無効にする
-  //   $('.js-loading').delay(3000).fadeOut(2000, function () {
-  //     $('body').css('overflow', 'auto'); // アニメーション終了後に背景のスクロールを有効化する
-  //     window.location.hash = 'scroll=' + scrollPosition; // スクロール位置をURLのハッシュに追加
-  //   });
-  //   $('.js-loading').css('display', 'block');
-  //   $('.js-mask, .js-loading').delay(3000).fadeOut(2000);
-  //   $('body').css('display', 'block');
+  /* --------------------------------------------
+  /* ローディングアニメーション
+  /* -------------------------------------------- */
+  $(window).on("load", function () {
+    var loadCount = sessionStorage.getItem("loadCount");
 
-  // });
+    // 初回のロード時の処理
+    if (loadCount === null) {
+      $(".js-loading").delay(0).fadeIn(900);
+      $(".js-loading-title").delay(300).fadeIn(800);
+      $(".js-loading").delay(2500).fadeOut(900);
+      $("body").delay(2500) // ローディング画面を表示した時間に合わせて適切な時間を設定
+      .queue(function (next) {
+        $("body").removeClass("js-fixed");
+        next();
+      });
+      sessionStorage.setItem("loadCount", 1);
+    } else {
+      // 2回目以降のロード時の処理
+      $(".js-loading").hide();
+      $(".js-loading-title").hide();
+      $("body").removeClass("js-fixed");
+      $(window).scrollTop(0); // スクロール位置をトップに戻す
+    }
+  });
 
+  /* --------------------------------------------
+  /* 背景色のあとに画像が表示されるエフェクト
+  /* -------------------------------------------- */
   // 要素の取得とスピードの設定
   var box = $('.js-image-effect');
   var speed = 700;
@@ -41,6 +57,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       }
     });
   });
+
+  /* --------------------------------------------
+  /* ファーストビューのスワイパー
+  /* -------------------------------------------- */
   //Swiper
   let swiper = new Swiper('.js-mv-swiper', {
     loop: true,
@@ -52,7 +72,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     speed: 2000,
   });
 
-
+  /* --------------------------------------------
+  /* キャンペーンカードのスワイパー
+  /* -------------------------------------------- */
   let swiper2 = new Swiper(".js-campaign-swiper", {
     loop: true,
     grabCursor: true,
@@ -77,7 +99,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
-  //ドロワーメニュー
+  /* --------------------------------------------
+  /* ハンバーガーメニュー
+  /* -------------------------------------------- */
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
@@ -90,7 +114,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  //トップに戻るボタン
+  /* --------------------------------------------
+  /* トップに戻るボタン
+  /* -------------------------------------------- */
   $(".top-button").hide();
   $(window).on("scroll resize", function () { // ウィンドウサイズの変更も監視するように追加
     if ($(this).scrollTop() > 100) {
@@ -130,7 +156,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  // ヘッダークラス名付与 MV以下で色付け
+  /* --------------------------------------------
+  /* ヘッダーの背景色
+  /* -------------------------------------------- */
   let header = $('.header')
   let headerHeight = $('.header').height();
   let height = $('.mv').height();
@@ -144,7 +172,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-  //モーダル
+  /* --------------------------------------------
+  /* モーダル
+  /* -------------------------------------------- */
   $(".js-gallery img").click(function () {
     // まず、クリックした画像の HTML(<img>タグ全体)を#gallery__gray-display内にコピー
     $("#gallery__gray-display").html($(this).prop("outerHTML"));
@@ -163,6 +193,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  /* --------------------------------------------
+  /* お客様の声 カテゴリーのスイッチ
+  /* -------------------------------------------- */
   $(function () {
     // 最初の要素にデフォルトで"active"クラスを付与
     $(".voice-main__category-list:first").addClass("active");
@@ -176,44 +209,55 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  //アコーディオン
+  /* --------------------------------------------
+  /* アコーディオン
+  /* -------------------------------------------- */
   jQuery('.qa__head').on('click', function () {
     jQuery(this).next().slideToggle();
     jQuery(this).children('.qa__head').toggleClass('is-open');
   });
 
-
-
-
+  /* --------------------------------------------
+  /* コンタクトフォームの必須項目入力を確認
+  /* -------------------------------------------- */
   $(document).ready(function () {
     $('#js-form').submit(function (event) {
       // フォームの必須項目を確認
-      var nameInput = $('#name').val();
-      var email = $('#email').val();
-      var tel = $('#tel').val();
-      var checkbox = $('#checkbox').prop('checked'); // チェックボックスの場合はcheckedプロパティを取得
-      var textarea = $('#textarea').val();
+      var nameInput = $('#name');
+      var emailInput = $('#email');
+      var telInput = $('#tel');
+      var checkboxInput = $('[name="checkboxGroup"]');
+      var textareaInput = $('#textarea');
 
-      if (nameInput === '' || email === '' || tel === '' || !checkbox || textarea === '') {
-        $('.contact-main__text').css('display', 'block');
+      var inputs = [nameInput, emailInput, telInput, checkboxInput, textareaInput];
 
-        // 必須項目が空の場合、背景と枠を赤くする
-        if (nameInput === '') {
-          $('#name').css({
+      // エラーメッセージを表示にする
+      $('.contact-main__text').css('display', 'block');
+
+      // 必須項目が空の場合、背景と枠を赤くする
+      for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        var value = input.val();
+        var isCheckbox = input.is(':checkbox');
+
+        if (value === '' || (isCheckbox && !input.prop('checked'))) {
+          input.css({
             "background": "rgba(201, 72, 0, 0.20)",
             "border": "1px solid #C94800",
           });
-          // placeholderの色を変更
-          // $('#name input').attr('placeholder', ' ').css({
-          //   "color": "#FFF"  // プレースホルダの色を白に変更
-          // });
+          if (isCheckbox) {
+            input.parent().css({
+              "background": "rgba(201, 72, 0, 0.20)",
+              "border": "1px solid #C94800",
+            });
+          }
+          event.preventDefault(); // フォームの送信を防ぐ
         } else {
-          $('#name').css('background', '#FFF');
+          input.css({
+            "background": "#FFF",
+            "border": "1px solid #408F95",
+          });
         }
-
-        // email, tel, checkbox, textarea に対する同様の処理を追加
-
-        event.preventDefault(); // フォームの送信を防ぐ
       }
     });
   });

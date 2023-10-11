@@ -39,7 +39,22 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 
-<body>
+<body class="js-fixed">
+
+  <!-- ローディング（検証中） -->
+  <div class="loading js-loading">
+    <div class="loading__wrapper">
+      <div class="loading__inner js-loading-title">
+        <h2 class="loading__main">DIVING</h2>
+        <p class="loading__sub">into&nbsp;the&nbsp;ocean</p>
+      </div>
+      <div class="loading__mask">
+        <img class="loading__img-left loading__img-left--fadeUp1" src="./assets/images/common/loading_1.jpg" alt="綺麗な海を泳ぐウミガメ" />
+        <img class="loading__img-right loading__img-right--fadeUp2" src="./assets/images/common/loading_2.jpg" alt="綺麗な海を泳ぐウミガメ" />
+      </div>
+    </div>
+  </div>
+
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -159,20 +174,6 @@
     </div>
   </header>
   <main>
-    <!-- !!!ローディング（検証中）!!!
-    <div class="loading js-loading">
-      <div class="loading__wrapper">
-        <div class="loading__inner">
-          <p class="loading__main">DIVING</p>
-          <p class="loading__sub">into the ocean</p>
-        </div>
-        <div class="loading__mask js-mask">
-          <img class="loading__img-left loading__img-left--fadeUp1" src="./assets/images/common/loading_1.jpg" alt="綺麗な海を泳ぐウミガメ" />
-          <img class="loading__img-right loading__img-right--fadeUp2" src="./assets/images/common/loading_2.jpg" alt="綺麗な海を泳ぐウミガメ" />
-        </div>
-      </div>
-    </div>
-    -->
     <!-- ファーストビュー -->
     <section class="mv">
       <!-- Swiper -->
