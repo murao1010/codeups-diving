@@ -40,8 +40,7 @@
 </head>
 
 <body class="js-fixed">
-
-  <!-- ローディング（検証中） -->
+  <!-- ローディング -->
   <div class="loading js-loading">
     <div class="loading__wrapper">
       <div class="loading__inner js-loading-title">
@@ -55,10 +54,11 @@
     </div>
   </div>
 
+  <!-- ヘッダーメニュー -->
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a href="#" class="header__logo-link"><img src="./assets/images/common/CodeUps.svg" alt="codeups"></a>
+        <a href="index.html" class="header__logo-link"><img src="./assets/images/common/CodeUps.svg" alt="codeups"></a>
       </h1>
       <div class="header__drawer hamburger js-hamburger">
         <span></span>
@@ -68,28 +68,28 @@
       <nav class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="#" data-en="Campaign">キャンペーン</a>
+            <a href="campaign.html" data-en="Campaign">キャンペーン</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="About us">私たちについて</a>
+            <a href="about.html" data-en="About us">私たちについて</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="Information">ダイビング情報</a>
+            <a href="information.html" data-en="Information">ダイビング情報</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="Blog">ブログ</a>
+            <a href="blog.html" data-en="Blog">ブログ</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="Voice">お客様の声</a>
+            <a href="voice.html" data-en="Voice">お客様の声</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="Price">料金一覧</a>
+            <a href="price.html" data-en="Price">料金一覧</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="FAQ">よくある質問</a>
+            <a href="faq.html" data-en="FAQ">よくある質問</a>
           </li>
           <li class="pc-nav__item">
-            <a href="#" data-en="Contact">お問い合わせ</a>
+            <a href="contact.html" data-en="Contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -98,7 +98,7 @@
           <li class="sp-nav__left-column">
             <ul class="sp-nav__nav">
               <li class="sp-nav__nav-item">
-                <a href="#">キャンペーン</a>
+                <a href="campaign.html">キャンペーン</a>
                 <ul class="sp-nav__sub-nav">
                   <li class="sp-nav__sub-nav-item">
                     <a href="#">ライセンス取得</a>
@@ -112,10 +112,10 @@
                 </ul>
               </li>
               <li class="sp-nav__nav-item">
-                <a href="#">私たちについて</a>
+                <a href="about.html">私たちについて</a>
               </li>
               <li class="sp-nav__nav-item">
-                <a href="#">ダイビング情報</a>
+                <a href="information.html">ダイビング情報</a>
                 <ul class="sp-nav__sub-nav">
                   <li class="sp-nav__sub-nav-item">
                     <a href="#">ライセンス講習</a>
@@ -129,17 +129,17 @@
                 </ul>
               </li>
               <li class="sp-nav__nav-item">
-                <a href="#">ブログ</a>
+                <a href="blog.html">ブログ</a>
               </li>
             </ul>
           </li>
           <li class="sp-nav__right-column">
             <ul class="sp-nav__nav">
               <li class="sp-nav__nav-item">
-                <a href="#">お客様の声</a>
+                <a href="voice.html">お客様の声</a>
               </li>
               <li class="sp-nav__nav-item">
-                <a href="#">料金一覧</a>
+                <a href="price.html">料金一覧</a>
                 <ul class="sp-nav__sub-nav">
                   <li class="sp-nav__sub-nav-item">
                     <a href="#">ライセンス講習</a>
@@ -153,19 +153,19 @@
                 </ul>
               </li>
               <li class="sp-nav__nav-item">
-                <a href="#">よくある質問</a>
+                <a href="faq.html">よくある質問</a>
               </li>
               <li class="sp-nav__nav-item sp-nav__nav-item--mt">
-                <a href="#">プライバシー<br>ポリシー</a>
+                <a href="privacy.html">プライバシー<br>ポリシー</a>
               </li>
               <li class="sp-nav__nav-item sp-nav__nav-item--mt">
-                <a href="#">利用規約</a>
+                <a href="terms.html">利用規約</a>
               </li>
               <li class="sp-nav__nav-item sp-nav__nav-item--mt">
-                <a href="#">お問い合わせ</a>
+                <a href="contact.html">お問い合わせ</a>
               </li>
               <li class="sp-nav__nav-item sp-nav__nav-item--mt">
-                <a href="#">サイトマップ</a>
+                <a href="sitemap.html">サイトマップ</a>
               </li>
             </ul>
           </li>
@@ -173,6 +173,8 @@
       </nav>
     </div>
   </header>
+
+  <!-- メインコンテンツ -->
   <main>
     <!-- ファーストビュー -->
     <section class="mv">
@@ -215,7 +217,7 @@
       </div>
       <div class="mv__header">
         <h2 class="mv__title">DIVING</h2>
-        <p class="mv__sub-title">into the ocean</p>
+        <p class="mv__sub-title">into&nbsp;the&nbsp;ocean</p>
       </div>
     </section>
     <!-- キャンペーン -->
@@ -316,7 +318,7 @@
           <div class="swiper-button-next"></div>
         </div>
         <div class="campaign__button-wrap">
-          <a href="#" class="button">View more<span></span></a>
+          <a href="#" class="button">View&nbsp;more<span></span></a>
         </div>
       </div>
     </section>
@@ -338,8 +340,8 @@
           </div>
           <div class="about__contents-wrap">
             <h3 class="about__catchcopy">
-              Dive into<br>
-              the Ocean
+              Dive&nbsp;into<br>
+              the&nbsp;Ocean
             </h3>
             <div class="about__text-block">
               <p class="about__text">
@@ -347,7 +349,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
               </p>
               <div class="about__button-wrap">
-                <a href="#" class="button">View more<span></span></a>
+                <a href="#" class="button">View&nbsp;more<span></span></a>
               </div>
             </div>
           </div>
@@ -374,7 +376,7 @@
               </p>
             </div>
             <div class="information__button-wrap">
-              <a href="#" class="button">View more<span></span></a>
+              <a href="#" class="button">View&nbsp;more<span></span></a>
             </div>
           </div>
         </div>
@@ -441,7 +443,7 @@
           </a>
         </div>
         <div class="blog__button-wrap">
-          <a href="#" class="button">View more<span></span></a>
+          <a href="#" class="button">View&nbsp;more<span></span></a>
         </div>
       </div>
     </section>
@@ -532,7 +534,7 @@
                   <dd>¥60,000</dd>
                 </div>
                 <div class="price-block__item">
-                  <dt>レスキュー＋EFRコース</dt>
+                  <dt>レスキュー&nbsp;&#43;&nbsp;EFRコース</dt>
                   <dd>¥70,000</dd>
                 </div>
               </dl>
@@ -595,7 +597,7 @@
           </div>
         </div>
         <div class="price__button-wrap">
-          <a href="#" class="button">View more<span></span></a>
+          <a href="#" class="button">View&nbsp;more<span></span></a>
         </div>
       </div>
     </section>
@@ -631,22 +633,26 @@
             </div>
             <p class="contact__link">ご予約・お問い合わせはコチラ</p>
             <div class="contact__button-wrap">
-              <a href="#" class="button">Contact us<span></span></a>
+              <a href="#" class="button">Contact&nbsp;us<span></span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- トップに戻るボタン -->
   <div class="top-button">
     <a href="#top"><img src="./assets/images/common/toTOP.png" alt="画面の上部に戻るボタン"></a>
   </div>
+
+  <!-- フッターメニュー -->
   <footer>
     <div class="footer top-footer">
       <div class="footer__inner inner">
         <div class="footer__heading">
           <div class="footer__logo">
-            <a href="#"><img src="./assets/images/common/CodeUps_2.svg" alt="codeups"></a>
+            <a href="index.html"><img src="./assets/images/common/CodeUps_2.svg" alt="codeups"></a>
           </div>
           <div class="footer__sns">
             <a href="#" class="footer__sns-facebook"><img src="./assets/images/common/Facebook-Logo.png"
@@ -660,7 +666,7 @@
             <div class="footer__column">
               <ul class="footer__nav">
                 <li class="footer__nav-item">
-                  <a href="#">キャンペーン</a>
+                  <a href="campaign.html">キャンペーン</a>
                   <ul class="footer__sub-nav">
                     <li class="footer__sub-nav-item">
                       <a href="#">ライセンス取得</a>
@@ -674,14 +680,14 @@
                   </ul>
                 </li>
                 <li class="footer__nav-item">
-                  <a href="#">私たちについて</a>
+                  <a href="about.html">私たちについて</a>
                 </li>
               </ul>
             </div>
             <div class="footer__column">
               <ul class="footer__nav">
                 <li class="footer__nav-item">
-                  <a href="#">ダイビング情報</a>
+                  <a href="information.html">ダイビング情報</a>
                   <ul class="footer__sub-nav">
                     <li class="footer__sub-nav-item">
                       <a href="#">ライセンス講習</a>
@@ -695,7 +701,7 @@
                   </ul>
                 </li>
                 <li class="footer__nav-item">
-                  <a href="#">ブログ</a>
+                  <a href="blog.html">ブログ</a>
                 </li>
               </ul>
             </div>
@@ -704,10 +710,10 @@
             <div class="footer__column">
               <ul class="footer__nav">
                 <li class="footer__nav-item">
-                  <a href="#">お客様の声</a>
+                  <a href="voice.html">お客様の声</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a href="#">料金一覧</a>
+                  <a href="price.html">料金一覧</a>
                   <ul class="footer__sub-nav">
                     <li class="footer__sub-nav-item">
                       <a href="#">ライセンス講習</a>
@@ -725,19 +731,19 @@
             <div class="footer__column">
               <ul class="footer__nav">
                 <li class="footer__nav-item">
-                  <a href="#">よくある質問</a>
+                  <a href="faq.html">よくある質問</a>
                 </li>
                 <li class="footer__nav-item footer__nav-item--mt">
-                  <a href="#">プライバシー<br class="u-mobile">ポリシー</a>
+                  <a href="privacy.html">プライバシー<br class="u-mobile">ポリシー</a>
                 </li>
                 <li class="footer__nav-item footer__nav-item--mt">
-                  <a href="#">利用規約</a>
+                  <a href="terms.html">利用規約</a>
                 </li>
                 <li class="footer__nav-item footer__nav-item--mt">
-                  <a href="#">お問い合わせ</a>
+                  <a href="contact.html">お問い合わせ</a>
                 </li>
                 <li class="footer__nav-item footer__nav-item--mt">
-                  <a href="#">サイトマップ</a>
+                  <a href="sitemap.html">サイトマップ</a>
                 </li>
               </ul>
             </div>
