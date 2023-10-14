@@ -6,3 +6,11 @@
     margin-top: rem(80);
   }
 }
+
+/* 投稿ページ用のmodifier */
+.lower-pagination--single {
+  margin-top: rem(35);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
