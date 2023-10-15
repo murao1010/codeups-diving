@@ -9,7 +9,7 @@
 
 /* 投稿ページ用のmodifier */
 .lower-pagination--single {
-  margin-top: rem(35);
+  margin-top: rem(40);
   @include mq('md') {
     margin-top: rem(80);
   }
