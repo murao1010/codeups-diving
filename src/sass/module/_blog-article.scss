@@ -1,7 +1,10 @@
 @use 'global' as *;
 
 .blog-article__mata {
-  margin-top: rem(4);
+  margin-top: rem(-4);
+  @include mq('md') {
+    margin-top: rem(4);
+  }
 }
 
 .blog-article__published {

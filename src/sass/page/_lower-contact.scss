@@ -1,7 +1,15 @@
 @use 'global' as *;
 
 .lower-contact {
-  margin-top: rem(104);
+  margin-top: rem(50);
+  @include mq('md') {
+    margin-top: rem(147);
+  }
+}
+
+/* 投稿ページ用のmodifier */
+.lower-contact--single {
+  margin-top: rem(106);
   @include mq('md') {
     margin-top: rem(147);
   }
@@ -14,3 +22,4 @@
     margin-top: rem(147);
   }
 }
+
