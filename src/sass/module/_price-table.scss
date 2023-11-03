@@ -5,8 +5,6 @@
   flex-direction: column;
   @include mq('md') {
     flex-direction: row;
-    max-width: rem(702);
-    width: 100%;
   }
 }
 

@@ -15,13 +15,13 @@
   position: absolute;
   top: rem(-25);
   left: max(rem(15), calc(50% - rem(620)));
+  z-index: -1;
   @include mq('md') {
     width: rem(301);
     height: rem(138);
     top: rem(-70);
   }
 }
-
 
 .campaign-main__contents {
   display: grid;

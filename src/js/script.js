@@ -194,27 +194,28 @@ jQuery(function ($) {
   });
 
   /* --------------------------------------------
-  /* お客様の声 カテゴリーのスイッチ
-  /* -------------------------------------------- */
-  $(function () {
-    // 最初の要素にデフォルトで"active"クラスを付与
-    $(".voice-main__category-list:first").addClass("active");
-
-    $(".voice-main__category-list").click(function () {
-      // すべての要素から"active"クラスを削除
-      $(".voice-main__category-list").not(this).removeClass("active");
-
-      // クリックした要素に"active"クラスを付与または削除
-      $(this).toggleClass("active");
-    });
-  });
-
-  /* --------------------------------------------
-  /* アコーディオン
+  /* QAのアコーディオン
   /* -------------------------------------------- */
   jQuery('.qa__head').on('click', function () {
     jQuery(this).next().slideToggle();
     jQuery(this).children('.qa__head').toggleClass('is-open');
+  });
+
+  /* --------------------------------------------
+  /* サイドバーのトグルリスト
+  /* -------------------------------------------- */
+  $(function () {
+    // 最初のアコーディオン以外を閉じる
+    $(".archive__year + .archive__lists").not(":first").slideUp(0);
+
+    // 最初のアコーディオンにクラスを追加して開く
+    $(".archive__year:first").addClass("open");
+
+    $(".archive__year").on("click", function () {
+      // クリックされたアコーディオンをトグル
+      $(this).toggleClass("open");
+      $(this).next(".archive__lists").slideToggle(300);
+    });
   });
 
   /* --------------------------------------------
@@ -259,6 +260,35 @@ jQuery(function ($) {
           });
         }
       }
+    });
+  });
+  /* --------------------------------------------
+  /* ダイビング情報のタブ切り替え
+  /* -------------------------------------------- */
+  $(function() {
+    // パラメータ取得
+    function getParam(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    // ページ読み込み時のタブ切り替え
+    let tabPram = ['tab-1', 'tab-2', 'tab-3'];
+    let pram = getParam('active-tab');
+    if (pram && $.inArray(pram, tabPram) !== -1) {
+      $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+      $('[data-tab="' + pram + '"]').addClass('is-active');
+    }
+
+    // ロード後のタブ切り替え
+    $('.js-tab-switch').on('click', function() {
+      let dataPram = $(this).data('tab');
+      $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+      $('[data-tab="' + dataPram + '"]').addClass('is-active');
     });
   });
 });

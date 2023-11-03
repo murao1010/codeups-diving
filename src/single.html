@@ -184,7 +184,6 @@
     <div class="lower-blog blog-main">
       <div class="blog-main__inner inner">
         <div class="blog-main__content">
-          <!-- WPループ処理開始 -->
           <div class="blog-main__article blog-article">
             <div class="blog-article__mata">
               <time class="blog-article__published" datetime="2023-11-17">2023.11/17</time>
@@ -194,25 +193,17 @@
               <div class="blog-article__image">
                 <img src="./assets/images/common/Blog-Card_1.jpg" alt="珊瑚礁">
               </div>
-              <div class="blog-article__content">
-                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-              <div class="blog-article__image">
-                <img src="./assets/images/common/Blog-Card_1.jpg" alt="珊瑚礁">
-              </div>
-              <div class="blog-article__content">
-                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-              <div class="blog-article__lists">
-                <ul>
-                  <li>リスト１</li>
-                  <li>リスト２</li>
-                  <li>リスト３</li>
-                </ul>
-              </div>
-              <div class="blog-article__content">
-                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
+            </div>
+            <div class="blog-article__content">
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+              <img src="./assets/images/common/Blog-Card_1.jpg" alt="珊瑚礁">
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+              <ul>
+                <li>リスト１</li>
+                <li>リスト２</li>
+                <li>リスト３</li>
+              </ul>
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
             </div>
             <!-- ページネーション -->
             <div class="lower-pagination lower-pagination--single pagination">
@@ -228,9 +219,8 @@
               </div>
             </div>
           </div>
-          <!-- WPループ処理終了 -->
           <!-- サイドバー -->
-          <div class="blog-main__sidebar blog-main__sidebar--single sidebar">
+          <aside class="blog-main__sidebar blog-main__sidebar--single sidebar">
             <!-- 人気記事 -->
             <div class="sidebar__block popular-article">
               <div class="sidebar__title popular-article__title"><span></span>人気記事</div>
@@ -329,7 +319,7 @@
             <div class="sidebar__block archive">
               <div class="sidebar__title archive__title"><span></span>アーカイブ</div>
               <div class="archive__wrap">
-                <p class="archive__year archive__year--open">2023</p>
+                <p class="archive__year">2023</p>
                   <ul class="archive__lists">
                     <li class="archive__month">
                       <a href="#">3月</a>
@@ -341,10 +331,10 @@
                       <a href="#">1月</a>
                     </li>
                   </ul>
-                <p class="archive__year archive__year--close">2022</p>
+                <p class="archive__year">2022</p>
               </div>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </div>
@@ -438,13 +428,13 @@
                   <a href="information.html">ダイビング情報</a>
                   <ul class="footer__sub-nav">
                     <li class="footer__sub-nav-item">
-                      <a href="#">ライセンス講習</a>
+                      <a href="information.html?active-tab=tab-1" class="js-tab-switch" data-tab="tab-1">ライセンス講習</a>
                     </li>
                     <li class="footer__sub-nav-item">
-                      <a href="#">体験ダイビング</a>
+                      <a href="information.html?active-tab=tab-3" class="js-tab-switch" data-tab="tab-3">体験ダイビング</a>
                     </li>
                     <li class="footer__sub-nav-item">
-                      <a href="#">ファンダイビング</a>
+                      <a href="information.html?active-tab=tab-2" class="js-tab-switch" data-tab="tab-2">ファンダイビング</a>
                     </li>
                   </ul>
                 </li>

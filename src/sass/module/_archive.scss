@@ -19,16 +19,16 @@
   height: rem(24);
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.archive__year--open::before {
-  background: url(../images/common/triangle-open.png) no-repeat center center/contain;
-}
-
-.archive__year--close::before {
+  top: 62%;
+  transform: translateY(-50%) rotate(120deg);
   background: url(../images/common/triangle-close.png) no-repeat center center/contain;
+  transition: .2s;
+}
+
+.archive__year.open::before {
+  top: 10%;
+  transform: rotate(210deg); // 下向きに変える
+  transition: .2s;
 }
 
 .archive__year--close {

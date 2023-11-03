@@ -30,16 +30,10 @@
   }
 }
 
-.blog-main__articles {
-  @include mq('md') {
-    width: calc(100% - rem(80) - rem(294));
-  }
-}
-
 .blog-main__article {
   @include mq('md') {
     margin-top: rem(-12);
-    width: rem(700);
+    width: calc(100% - rem(86) - rem(294));
   }
 }
 

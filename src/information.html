@@ -184,24 +184,33 @@
     <div class="lower-information information-main">
       <div class="information-main__inner inner">
         <div class="information-main__container">
-          <input id="information-main__tab-01" type="radio" name="TAB" class="information-main__switch" checked="checked" /><label class="information-main__label information-main__label--license" for="information-main__tab-01"><span></span>ライセンス<br class="sp__br">講習</label>
-          <div class="information-main__content">
-            <div class="diving-content">
-              <div class="diving-content__wrap">
-                <p class="diving-content__title">ライセンス講習</p>
-                <div class="diving-content__text-block">
-                  <p class="diving-content__text">
-                    泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
-                  </p>
+          <!--メニュー部分-->
+          <div class="information-main__menu">
+            <div class="information-main__menu-item information-main__menu-item--license js-tab-switch is-active" data-tab="tab-1"><span></span>ライセンス<br class="sp__br">講習</div>
+            <div class="information-main__menu-item information-main__menu-item--fun js-tab-switch" data-tab="tab-2"><span></span>ファン<br class="sp__br">ダイビング</div>
+            <div class="information-main__menu-item information-main__menu-item--trial js-tab-switch" data-tab="tab-3"><span></span>体験<br class="sp__br">ダイビング</div>
+          </div>
+          <!--コンテンツ部分-->
+          <div class="information-main__contents">
+            <!--ライセンス講習-->
+            <div class="information-main__content js-tab-cts is-active" data-tab="tab-1">
+              <div class="diving-content">
+                <div class="diving-content__wrap">
+                  <p class="diving-content__title">ライセンス講習</p>
+                  <div class="diving-content__text-block">
+                    <p class="diving-content__text">
+                      泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="diving-content__image">
-                <img src="./assets/images/common/Diving-content_1.jpg" alt="ダイバー達が綺麗な海を泳いでいる様子">
+                <div class="diving-content__image">
+                  <img src="./assets/images/common/Diving-content_1.jpg" alt="ダイバー達が綺麗な海を泳いでいる様子">
+                </div>
               </div>
             </div>
           </div>
-          <input id="information-main__tab-02" type="radio" name="TAB" class="information-main__switch" /><label class="information-main__label information-main__label--fun" for="information-main__tab-02"><span></span>ファン<br class="sp__br">ダイビング</label>
-          <div class="information-main__content">
+          <!--ファンダイビング-->
+          <div class="information-main__content js-tab-cts" data-tab="tab-2">
             <div class="diving-content">
               <div class="diving-content__wrap">
                 <p class="diving-content__title">ファンダイビング</p>
@@ -216,8 +225,8 @@
               </div>
             </div>
           </div>
-          <input id="information-main__tab-03" type="radio" name="TAB" class="information-main__switch" /><label class="information-main__label information-main__label--trial" for="information-main__tab-03"><span></span>体験<br class="sp__br">ダイビング</label>
-          <div class="information-main__content">
+          <!--体験ダイビング-->
+          <div class="information-main__content js-tab-cts" data-tab="tab-3">
             <div class="diving-content">
               <div class="diving-content__wrap">
                 <p class="diving-content__title">体験ダイビング</p>
@@ -324,13 +333,13 @@
                   <a href="information.html">ダイビング情報</a>
                   <ul class="footer__sub-nav">
                     <li class="footer__sub-nav-item">
-                      <a href="#">ライセンス講習</a>
+                      <a href="#" class="js-tab-switch" data-tab="tab-1">ライセンス講習</a>
                     </li>
                     <li class="footer__sub-nav-item">
-                      <a href="#">体験ダイビング</a>
+                      <a href="#" class="js-tab-switch" data-tab="tab-3">体験ダイビング</a>
                     </li>
                     <li class="footer__sub-nav-item">
-                      <a href="#">ファンダイビング</a>
+                      <a href="#" class="js-tab-switch" data-tab="tab-2">ファンダイビング</a>
                     </li>
                   </ul>
                 </li>

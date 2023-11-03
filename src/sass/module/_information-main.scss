@@ -23,35 +23,13 @@
   }
 }
 
-.information-main__container {
+.information-main__menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.information-main__switch:checked+.information-main__label {
-  background: #408F95;
-  color: $white;
-  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
-}
-
-.information-main__switch:checked+.information-main__label.information-main__label--license span {
-  background: url(../images/common/License-course_icon.svg) no-repeat center center/cover;
-}
-
-.information-main__switch:checked+.information-main__label.information-main__label--fun span {
-  background: url(../images/common/Fun-diving_icon.svg) no-repeat center center/cover;
-}
-
-.information-main__switch:checked+.information-main__label.information-main__label--trial span {
-  background: url(../images/common/Trial-diving_icon.svg) no-repeat center center/cover;
-}
-
-.information-main__switch:checked+.information-main__label+.information-main__content {
-  display: block;
-}
-
-.information-main__label {
+.information-main__menu-item {
   color: #408F95;
   background: #DDF0F1;
   font-size: rem(14);
@@ -67,6 +45,7 @@
   text-align: center;
   line-height: calc(20 / 14);
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
   @include mq('md') {
     width: rem(300);
     height: rem(90);
@@ -76,7 +55,14 @@
   }
 }
 
-.information-main__label span {
+.information-main__menu-item.is-active {
+  background: #408F95;
+  color: $white;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  cursor: default;
+}
+
+.information-main__menu-item span {
   @include mq('md') {
     width: rem(64);
     height: rem(64);
@@ -85,28 +71,39 @@
   }
 }
 
-.information-main__label.information-main__label--license span {
+/* タブのアイコン */
+.information-main__menu-item--license span {
   background: url(../images/common/License-course_icon_off.svg) no-repeat center center/cover;
 }
-
-.information-main__label.information-main__label--fun span {
+.information-main__menu-item--fun span {
   background: url(../images/common/Fun-diving_icon_off.svg) no-repeat center center/cover;
 }
-
-.information-main__label.information-main__label--trial span {
+.information-main__menu-item--trial span {
   background: url(../images/common/Trial-diving_icon_off.svg) no-repeat center center/cover;
 }
+/* タブのアイコン(アクティブ時) */
+.information-main__menu-item.is-active.information-main__menu-item--license span {
+  background: url(../images/common/License-course_icon.svg) no-repeat center center/cover;
+}
+.information-main__menu-item.is-active.information-main__menu-item--fun span {
+  background: url(../images/common/Fun-diving_icon.svg) no-repeat center center/cover;
+}
+.information-main__menu-item.is-active.information-main__menu-item--trial span {
+  background: url(../images/common/Trial-diving_icon.svg) no-repeat center center/cover;
+}
 
-.information-main__content {
+.information-main__contents {
   width: 100%;
-  display: none;
   margin-top: rem(15);
   @include mq('md') {
     margin-top: rem(24);
   }
 }
 
-/* ラジオボタン非表示 */
-.information-main__switch {
+.information-main__content {
   display: none;
+}
+
+.information-main__content.is-active {
+  display: block;
 }

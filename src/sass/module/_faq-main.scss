@@ -23,16 +23,8 @@
   }
 }
 
-
-.faq-main__contents {
-  margin-top: rem(52);
-  @include mq('md') {
-    margin-top: rem(150);
-  }
-}
-
-.faq-main__content {
-  max-width: rem(700);
+.faq-main__inner.inner {
+  max-width: rem(750);
   width: 100%;
   margin-left: auto;
   margin-right: auto;

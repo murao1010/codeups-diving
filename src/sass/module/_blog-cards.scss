@@ -14,3 +14,19 @@
     margin-top: 0;
   }
 }
+
+/* 下層のブログ一覧用Modifier */
+.blog-cards--col2 {
+  @include mq('md') {
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(80);
+    column-gap: rem(40);
+  }
+}
+
+.blog-cards--col2 .blog-cards__item {
+  max-width: rem(333);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

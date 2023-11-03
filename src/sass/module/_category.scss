@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+.category__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: rem(16);
+  column-gap: rem(21);
+  @include mq('md') {
+    grid-template-columns: repeat(auto-fill, min(#{rem(162)}));
+    column-gap: rem(32);
+  }
+}
+
+.category__item {
+  display: inline-block;
+}
+
+.category__item a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  color: $accent;
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  padding-left: rem(10);
+  padding-right: rem(10);
+  border: 1px solid $accent;
+  transition: 0.3s;
+  background-color: $white;
+}
+
+.category__item.is-active a {
+  background-color: $accent;
+  color: $white;
+}

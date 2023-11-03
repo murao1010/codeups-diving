@@ -23,6 +23,13 @@
   }
 }
 
+.inner.contact-main__inner {
+  max-width: rem(750);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact-main__text {
   text-align: center;
   color: #C94800;
@@ -30,13 +37,6 @@
   line-height: calc(20 / 14);
   margin-bottom: rem(40);
   display: none;
-}
-
-.contact-main__form {
-  max-width: rem(700);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .contact-main__thanks-wrap {

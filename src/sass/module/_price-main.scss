@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.inner.price-main__inner {
+  @include mq('md') {
+    max-width: rem(752);
+    width: 100%;
+  }
+}
+
 .price-main::before {
   content: "";
   width: rem(120);
@@ -20,13 +27,6 @@
     width: rem(301);
     height: rem(138);
     top: rem(-70);
-  }
-}
-
-.price-main__container {
-  margin-top: rem(52);
-  @include mq('md') {
-    margin-top: rem(150);
   }
 }
 
