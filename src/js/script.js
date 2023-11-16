@@ -14,10 +14,10 @@ jQuery(function ($) {
       $(".js-loading-title").delay(300).fadeIn(800);
       $(".js-loading").delay(2500).fadeOut(900);
       $("body").delay(2500) // ローディング画面を表示した時間に合わせて適切な時間を設定
-      .queue(function (next) {
-        $("body").removeClass("js-fixed");
-        next();
-      });
+        .queue(function (next) {
+          $("body").removeClass("js-fixed");
+          next();
+        });
       sessionStorage.setItem("loadCount", 1);
     } else {
       // 2回目以降のロード時の処理
@@ -265,7 +265,7 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* ダイビング情報のタブ切り替え
   /* -------------------------------------------- */
-  $(function() {
+  $(function () {
     // パラメータ取得
     function getParam(name, url) {
       if (!url) url = window.location.href;
@@ -285,10 +285,43 @@ jQuery(function ($) {
     }
 
     // ロード後のタブ切り替え
-    $('.js-tab-switch').on('click', function() {
+    $('.js-tab-switch').on('click', function () {
       let dataPram = $(this).data('tab');
       $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
       $('[data-tab="' + dataPram + '"]').addClass('is-active');
+    });
+  });
+  /* --------------------------------------------
+  /* スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
+  /* -------------------------------------------- */
+  $(function () {
+    let pageHash = window.location.hash;
+    if (pageHash) {
+      let scrollToElement = $('[data-id="' + pageHash + '"]');
+      if (!scrollToElement.length) return;
+      $(window).on('load', function () {
+        history.replaceState('', '', './');
+        let locationOffset = scrollToElement.offset().top;
+        let navigationBarHeight = $('.header').innerHeight();
+        locationOffset = locationOffset - navigationBarHeight - 65;
+        $('html, body').animate({
+          scrollTop: locationOffset
+        }, 300, 'swing');
+      });
+    }
+  });
+  
+  $(function () {
+    $('a[href*="#"]').on('click', function () {
+      const scrollSpeed = 400;
+      const navigationHeight = $(".header").innerHeight();
+      const scrollToTarget = $(this.hash === '#' || '' ? 'html' : this.hash)
+      if (!scrollToTarget.length) return;
+      const scrollPosition = scrollToTarget.offset().top - navigationHeight - 105;
+      $('html, body').animate({
+        scrollTop: scrollPosition
+      }, scrollSpeed, 'swing');
+      return false;
     });
   });
 });
